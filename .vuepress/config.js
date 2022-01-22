@@ -67,7 +67,7 @@ module.exports = {
     "@vuepress/back-to-top": true,
     // 音乐插件
     "@vuepress-reco/vuepress-plugin-bgm-player": {
-      autoplay: true,
+      autoplay: false,
       autoShrink: true,
       audios: [
         {
