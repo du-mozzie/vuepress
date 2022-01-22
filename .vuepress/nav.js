@@ -10,7 +10,7 @@ module.exports = [
     icon: "reco-date",
   },
   {
-    text: "Docs",
+    text: "文档",
     icon: "reco-message",
     items: [
       {
@@ -28,12 +28,12 @@ module.exports = [
     ],
   },
   {
-    text: "Contact",
+    text: "联系",
     icon: "reco-message",
     items: [
       {
         text: "GitHub",
-        link: "https://github.com/recoluan",
+        link: "https://github.com/du-mozzie",
         icon: "reco-github",
       },
     ],

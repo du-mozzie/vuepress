@@ -1,7 +1,7 @@
 ---
 home: true
-heroText: vuepress-theme-reco
-tagline: A simple and beautiful vuepress blog theme.
+heroText: Du
+tagline: 唯有热爱，能抵岁月漫长
 # heroImage: /hero.png
 # heroImageStyle: {
 #   maxWidth: '600px',

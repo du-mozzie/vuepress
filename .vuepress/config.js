@@ -1,9 +1,9 @@
 const nav = require("./nav");
 const sidebar = require("./sidebar");
 module.exports = {
-  title: "blog",
-  description: "blog",
-  port: "9090",
+  title: "Coder du",
+  description: "This is my personal blog",
+  port: "8080",
   dest: "public",
   head: [
     [
@@ -21,6 +21,12 @@ module.exports = {
       },
     ],
   ],
+  // 多语言配置
+  locales: {
+    '/': {
+      lang: 'zh-CN'
+    }
+  },
   theme: "reco",
   themeConfig: {
     nav: nav,
@@ -43,13 +49,6 @@ module.exports = {
         email: "1156743527@qq.com",
         link: "https://www.recoluan.com",
       },
-      {
-        title: "vuepress-theme-reco",
-        desc: "A simple and beautiful vuepress Blog & Doc theme.",
-        avatar:
-          "https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png",
-        link: "https://vuepress-theme-reco.recoluan.com",
-      },
     ],
     logo: "/logo.png",
     search: true,
@@ -58,7 +57,7 @@ module.exports = {
     author: "Du",
     authorAvatar: "/avatar.png",
     record: "xxxx",
-    startYear: "2017",
+    startYear: "2022",
   },
   markdown: {
     lineNumbers: true,
@@ -67,12 +66,11 @@ module.exports = {
     "@vuepress/back-to-top": true,
     "@vuepress-reco/vuepress-plugin-bgm-player": {
       audios: [
-        // 网络文件示例
         {
-          name: "강남역 4번 출구",
-          artist: "Plastic / Fallin` Dild",
-          url: "https://assets.smallsunnyfox.com/music/2.mp3",
-          cover: "https://assets.smallsunnyfox.com/music/2.jpg",
+          name: "水星记",
+          artist: "郭顶",
+          url: "https://m10.music.126.net/20220122182646/cdb8a3e492ecb1d8ec0065e7d829ea17/ymusic/3dd2/3efd/8621/aaf0881569565f9fd2946ad9551ab491.mp3",
+          cover: "http://p1.music.126.net/wSMfGvFzOAYRU_yVIfquAA==/2946691248081599.jpg?param=130y130",
         },
       ],
     },
