@@ -63,13 +63,17 @@ module.exports = {
     lineNumbers: true,
   },
   plugins: {
+    // 回到顶部插件
     "@vuepress/back-to-top": true,
+    // 音乐插件
     "@vuepress-reco/vuepress-plugin-bgm-player": {
+      autoplay: true,
+      autoShrink: true,
       audios: [
         {
           name: "水星记",
           artist: "郭顶",
-          url: "https://m10.music.126.net/20220122182646/cdb8a3e492ecb1d8ec0065e7d829ea17/ymusic/3dd2/3efd/8621/aaf0881569565f9fd2946ad9551ab491.mp3",
+          url: "http://www.ihaoge.net/kw/antiserver.kuwo.cn/anti.s?rid=MUSIC_12018064&response=res&format=mp3|aac&type=convert_url&br=128kmp3&agent=iPhone&callback=getlink&jpcallback=getlink.mp3",
           cover: "http://p1.music.126.net/wSMfGvFzOAYRU_yVIfquAA==/2946691248081599.jpg?param=130y130",
         },
       ],
