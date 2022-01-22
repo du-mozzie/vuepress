@@ -3,7 +3,7 @@ const sidebar = require("./sidebar");
 module.exports = {
   title: "Coder du",
   description: "This is my personal blog",
-  port: "8080",
+  port: "80",
   dest: "public",
   head: [
     [
