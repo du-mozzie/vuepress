@@ -56,7 +56,7 @@ module.exports = {
     lastUpdated: "Last Updated",
     author: "Du",
     authorAvatar: "/avatar.png",
-    record: "xxxx",
+    record: "蜀ICP备2022003390号-1",
     startYear: "2022",
   },
   markdown: {
