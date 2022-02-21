@@ -14,16 +14,20 @@ module.exports = [
     icon: "reco-message",
     items: [
       {
-        //   /docs/theme-reco/ MD
-        //  README.md
-        text: "java",
+        /* text: "java",
         link: "/docs/theme-reco/",
         items: [
           {
             text: "javaSE",
             link: "/docs/java/level-one-se/",
           },
-        ],
+        ], */
+        text: "随笔",
+        link: "/docs/theme-reco/",
+      },
+      {
+        text: "JavaSE",
+        link: "/docs/theme-reco/",
       },
     ],
   },
