@@ -63,8 +63,10 @@ module.exports = {
     lineNumbers: true,
   },
   plugins: {
+
     // 回到顶部插件
     "@vuepress/back-to-top": true,
+
     // 音乐插件
     "@vuepress-reco/vuepress-plugin-bgm-player": {
       autoplay: false,

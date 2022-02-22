@@ -18,6 +18,14 @@ module.exports = [
         link: "/docs/essay/",
       },
       {
+        text: "数据结构",
+        link: "/docs/dataStructuresAndAlgorithms/dataStructures/",
+      },
+      {
+        text: "算法",
+        link: "/docs/dataStructuresAndAlgorithms/algorithms/",
+      },
+      {
         text: "JavaSE",
         link: "/docs/javase/",
       },
