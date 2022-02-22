@@ -14,6 +14,7 @@
   },
   "description": "blog",
   "dependencies": {
-    "@vuepress/plugin-blog": "^1.9.4"
+    "@vuepress/plugin-blog": "^1.9.4",
+    "vuepress-plugin-nuggets-style-copy": "^1.0.3"
   }
 }
