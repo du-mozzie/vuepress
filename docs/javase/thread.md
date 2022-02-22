@@ -46,11 +46,11 @@ tags:
 
 系统会为每个线程分配 CPU 资源，在某个具体的时间段内 CPU 资源会被一个线程占用，在不同的时间段内由不同的线程来占用 CPU 资源，**所以多个线程还是在交替执行，只不过因为 CPU 运行速度太快，我们感觉是在同时执行。**
 
-![image-20220114195522951](https://coderdu.com/typoraImages//image-20220114195522951.png)
+![image-20220114195522951](https://coderdu.com/image/image-20220114195522951.png)
 
 整个程序如果是一条回路，说明程序只有一个线程。
 
-![image-20220114195535189](https://coderdu.com/typoraImages//image-20220114195535189.png)
+![image-20220114195535189](https://coderdu.com/image/image-20220114195535189.png)
 
 程序有两条回路，同时向下执行，这种情况就是多线程，两个线程同时在执行。
 
@@ -177,7 +177,7 @@ thread2.start();
 
 线程状态之间的转换图。
 
-![image-20220114195638928](https://coderdu.com/typoraImages//image-20220114195638928.png)
+![image-20220114195638928](https://coderdu.com/image/image-20220114195638928.png)
 
 ### 7、Java 多线程的实现
 
@@ -434,7 +434,7 @@ public class Test {
 }
 ```
 
-![image-20220114195852674](https://coderdu.com/typoraImages//image-20220114195852674.png)
+![image-20220114195852674](https://coderdu.com/image/image-20220114195852674.png)
 
 NEW 表示当前线程对象为创建状态，false 表示当前线程并未中断，因为当前线程没有启动，不存在中断，不需要清除标志位。
 
@@ -993,7 +993,7 @@ ReentrantLock 是 Lock 接口的实现类。
 
 实现 Runnable 的耦合度更低
 
-![image-20220114200212174](https://coderdu.com/typoraImages//image-20220114200212174.png)
+![image-20220114200212174](https://coderdu.com/image/image-20220114200212174.png)
 
 ```java
 public class Test {
@@ -1055,7 +1055,7 @@ class Account2 implements Runnable{
 }
 ```
 
-![image-20220114200302960](https://coderdu.com/typoraImages//image-20220114200302960.png)
+![image-20220114200302960](https://coderdu.com/image/image-20220114200302960.png)
 
 ### 17、Tips
 

@@ -2,7 +2,7 @@
 title: 随笔
 date: 2022-2-21
 categories:
- - essay
+ - Essay
 tags:
  - 随笔
 ---

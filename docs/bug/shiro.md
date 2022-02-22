@@ -1,13 +1,11 @@
 ---
-title: Bug整理
-date: 2022-2-21
+title: Shiro
+date: 2022-2-22
 categories:
  - Bug
 tags:
- - 
+ - Bug
 ---
-# Shiro
-
 ## 同类型无法转换
 
 java.lang.ClassCastException: com.du.shiro.Account Profile cannot be cast to com.du.shiro.AccountProfile
@@ -114,80 +112,3 @@ try {
         user = SysUserEntity.convertObjToEntity(principals.getPrimaryPrincipal());
     }
 ```
-
-# Vue
-
-## 静态资源引入
-
-### vue图片引入的三种方式
-
->   图片放在 assets目录下 和static 目录下
-
-##### 1. 在template 中直接固定的引入
-
-```vue
-<img src="../assets/logo.png">
-```
-
-##### 2. 把图片放static 目录,直接通过data引入
-
-```vue
-// template
-<img v-bind:src=imgSrc>
-// srcipt
-export default {
-  data () {
-    return {
-      imgSrc: '../static/launch.png'
-    };
-  }
-};
-```
-
-##### 3. 如果放在其它目录,直接通过data引入,则需要如下引入
-
-```vue
-require('../assets/launch.png')` 或者 `import logo from '../assets/logo.png'
-// template
-<img v-bind:src=imgSrc>
-// srcipt
-export default {
-  data () {
-    return {
-      imgSrc: require('../assets/launch.png')
-    };
-  }
-};
-import logo from '../assets/logo.png
-// template
-<img v-bind:src=imgSrc>
-// srcipt
-export default {
-  data () {
-    return {
-      imgSrc: logo
-    };
-  }
-};
-```
-
-# SpringData JPA
-
-## 实体类报错
-
-com.fasterxml.jackson.databind.exc.InvalidDefinitionException: No serializer found for class org.hibernate.proxy.pojo.bytebuddy.ByteBuddyInterceptor and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) (through reference chain: com.du.entity.User$HibernateProxy$bOI1IGY8["hibernateLazyInitializer"])
-
->   解决方法
-
-在pojo类上加上如下声明：
-
-@JsonIgnoreProperties(value={"hibernateLazyInitializer","handler","fieldHandler"}) 
-
-@JsonIgnoreProperties(value={"hibernateLazyInitializer"})  （此时只是忽略hibernateLazyInitializer属性）要加载被lazy的，也就是many-to-one的one端的pojo上
-
-这行代码的作用在于告诉你的jsonplug组件，在将你的代理对象转换为json对象时，忽略value对应的数组中的属性，即：
-
-通过java的反射机制将pojo转换成json的，属性，(通过java的反射机制将pojo转换成json的，)
-
-"hibernateLazyInitializer","handler","fieldHandler",（如果你想在转换的时候继续忽略其他属性，可以在数组中继续加入）
-

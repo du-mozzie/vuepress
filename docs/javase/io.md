@@ -34,7 +34,7 @@ Input 输入流（将外部文件读入到 Java 程序中）
 
 Output 输出流（将 Java 程序中的数据输出到外部）
 
-![image-20220114202710730](https://coderdu.com/typoraImages//image-20220114202710730.png)
+![image-20220114202710730](https://coderdu.com/image/image-20220114202710730.png)
 
 Java 中的流有很多种不同的分类。
 
@@ -94,7 +94,7 @@ OutputStream
 
 ### 5、Reader
 
-![image-20220114202728127](https://coderdu.com/typoraImages//image-20220114202728127.png)
+![image-20220114202728127](https://coderdu.com/image/image-20220114202728127.png)
 
 是一个抽象类
 
@@ -102,7 +102,7 @@ Readable 接口的作用？
 
 可以将数据以字符的形式读入到`缓冲区`
 
-![image-20220114202738105](https://coderdu.com/typoraImages//image-20220114202738105.png)
+![image-20220114202738105](https://coderdu.com/image/image-20220114202738105.png)
 
 - 方向：输入+输出
 - 单位：字节+字符
@@ -111,7 +111,7 @@ Readable 接口的作用？
 InputStream(字节输入流) —> Reader（字符输入流）
 
 InputStreamReader 的功能是将`字节输入流`转换为`字符输入流`
-![image-20220114202755005](https://coderdu.com/typoraImages//image-20220114202755005.png)
+![image-20220114202755005](https://coderdu.com/image/image-20220114202755005.png)
 
 > 英文、数字、符号
 
@@ -156,15 +156,15 @@ read(char[] chars) 返回的是char数组，直接就返回字符，不会转成
 
 ### 6、Writer
 
-![image-20220114202852617](https://coderdu.com/typoraImages//image-20220114202852617.png)
+![image-20220114202852617](https://coderdu.com/image/image-20220114202852617.png)
 
 Appendable 接口可以将 char 类型的数据读入到`数据缓冲区`
-![image-20220114202905901](https://coderdu.com/typoraImages//image-20220114202905901.png)
+![image-20220114202905901](https://coderdu.com/image/image-20220114202905901.png)
 
 OutputStreamWriter 处理流
 
 OutputStreamWriter 的功能是将`输出字节流`转成`输出字符流`，与 InputStreamReader 相对应的，将`输入字节流`转成`输入字符流`
-![image-20220114202923524](https://coderdu.com/typoraImages//image-20220114202923524.png)
+![image-20220114202923524](https://coderdu.com/image/image-20220114202923524.png)
 
 ```java
 public class Test {
@@ -228,11 +228,11 @@ public class Test2 {
 
 2、处理流使用的时候不可以直接对接到文件对象 File，必须要建立在`字节流`的基础上才能创建。
 
-![image-20220114203006564](https://coderdu.com/typoraImages//image-20220114203006564.png)
+![image-20220114203006564](https://coderdu.com/image/image-20220114203006564.png)
 
 缓冲流又可以分为字节缓冲流和字符缓冲流，按照方向再细分，又可以分为字节输入缓冲流和字节输出缓冲流，以及字符输入缓冲流和字符输出缓冲流。
 
-![image-20220114203035230](https://coderdu.com/typoraImages//image-20220114203035230.png)
+![image-20220114203035230](https://coderdu.com/image/image-20220114203035230.png)
 
 > 字节输入缓冲流
 
