@@ -54,7 +54,7 @@ module.exports = {
     search: true,
     searchMaxSuggestions: 10,
     lastUpdated: "Last Updated",
-    author: "Du",
+    author: "Du", 
     authorAvatar: "/avatar.png",
     record: "蜀ICP备2022003390号-1",
     startYear: "2022",
@@ -69,13 +69,19 @@ module.exports = {
 
     // 音乐插件
     "@vuepress-reco/vuepress-plugin-bgm-player": {
-      autoplay: false,
-      autoShrink: true,
+      autoplay: true,
+      autoShrink: false,
       audios: [
+        {
+          name: "1975",
+          artist: "Billy Raffoul",
+          url: "https://coderdu.com/music/1975.mp3",
+          cover: "http://p2.music.126.net/UWCy9qGn_3y6Y-GIgOAaBg==/109951163369745736.jpg?param=130y130",
+        },
         {
           name: "水星记",
           artist: "郭顶",
-          url: "http://www.ihaoge.net/kw/antiserver.kuwo.cn/anti.s?rid=MUSIC_12018064&response=res&format=mp3|aac&type=convert_url&br=128kmp3&agent=iPhone&callback=getlink&jpcallback=getlink.mp3",
+          url: "https://coderdu.com/music/%E6%B0%B4%E6%98%9F%E8%AE%B0.mp3",
           cover: "http://p1.music.126.net/wSMfGvFzOAYRU_yVIfquAA==/2946691248081599.jpg?param=130y130",
         },
       ],

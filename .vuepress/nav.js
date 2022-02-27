@@ -27,11 +27,15 @@ module.exports = [
       },
       {
         text: "JavaSE",
-        link: "/docs/javase/",
+        link: "/docs/javaSe/",
       },
       {
         text: "Bug",
         link: "/docs/bug/",
+      },
+      {
+        text: "RabbitMQ",
+        link: "/docs/mq/rabbitMq/",
       },
     ],
   },
