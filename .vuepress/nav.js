@@ -27,7 +27,7 @@ module.exports = [
       },
       {
         text: "JavaSE",
-        link: "/docs/javaSe/",
+        link: "/docs/javase/",
       },
       {
         text: "Bug",

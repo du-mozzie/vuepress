@@ -2,7 +2,7 @@
 const ESSAY = require("../docs/essay/sidebar")
 
 // JavaSE
-const JAVA_SE = require("../docs/javaSe/sidebar")
+const JAVA_SE = require("../docs/javase/sidebar")
 
 // Bug
 const BUG = require("../docs/bug/sidebar")
