@@ -69,8 +69,8 @@ module.exports = {
 
     // 音乐插件
     "@vuepress-reco/vuepress-plugin-bgm-player": {
-      autoplay: true,
-      autoShrink: false,
+      autoplay: false,
+      autoShrink: true,
       audios: [
         {
           name: "1975",

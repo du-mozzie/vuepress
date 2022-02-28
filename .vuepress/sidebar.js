@@ -1,6 +1,3 @@
-// 随笔
-const ESSAY = require("../docs/essay/sidebar")
-
 // JavaSE
 const JAVA_SE = require("../docs/javase/sidebar")
 
@@ -17,7 +14,6 @@ const ALGORITHMS = require("../docs/dataStructuresAndAlgorithms/algorithms/sideb
 const RABBIT_MQ = require("../docs/mq/rabbitMq/sidebar")
 
 module.exports = {
-  "/docs/essay/": ESSAY,
   "/docs/javase/": JAVA_SE,
   "/docs/bug/": BUG,
   "/docs/dataStructuresAndAlgorithms/dataStructures/": DATA_STRUCTURE,

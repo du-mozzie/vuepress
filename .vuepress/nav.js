@@ -14,10 +14,6 @@ module.exports = [
     icon: "reco-message",
     items: [
       {
-        text: "随笔",
-        link: "/docs/essay/",
-      },
-      {
         text: "数据结构",
         link: "/docs/dataStructuresAndAlgorithms/dataStructures/",
       },
