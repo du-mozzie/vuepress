@@ -2,7 +2,7 @@
   "name": "blog",
   "version": "1.0.0",
   "author": "reco_luan",
-  "scripts": {
+  "scripts": { 
     "dev": "vuepress dev .",
     "build": "vuepress build ."
   },
