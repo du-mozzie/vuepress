@@ -58,6 +58,7 @@ module.exports = {
     authorAvatar: "/avatar.png",
     record: "蜀ICP备2022003390号-1",
     startYear: "2022",
+    recordLink: "https://beian.miit.gov.cn/"
   },
   markdown: {
     lineNumbers: true,
@@ -72,12 +73,6 @@ module.exports = {
       autoplay: false,
       autoShrink: true,
       audios: [
-        {
-          name: "1975",
-          artist: "Billy Raffoul",
-          url: "https://coderdu.com/music/1975.mp3",
-          cover: "http://p2.music.126.net/UWCy9qGn_3y6Y-GIgOAaBg==/109951163369745736.jpg?param=130y130",
-        },
         {
           name: "水星记",
           artist: "郭顶",
