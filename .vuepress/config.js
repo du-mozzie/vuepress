@@ -1,7 +1,7 @@
 const nav = require("./nav");
 const sidebar = require("./sidebar");
 module.exports = {
-  title: "Coder du",
+  title: "新动力羽毛球",
   description: "This is my personal blog",
   port: "80",
   dest: "public",
