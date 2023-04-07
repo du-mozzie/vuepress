@@ -11,7 +11,7 @@ tags:
 
 ==由同类型数据元素构成有序序列的线性结构==
 
-![image-20210418224522556](https://coderdu.com/image/image-20210418224522556.png)
+![image-20210418224522556](https://www.itdu.tech/image/image-20210418224522556.png)
 
    -   表中元素个数称为线性表的**长度**
    -   线性表没有元素时，成为**空表**
@@ -23,7 +23,7 @@ tags:
 
 操作集：线性表L∈List，整数i表示位置，元素X∈ElementType，线性表基本操作主要有：
 
-   ![image-20201209160216218](https://coderdu.com/image/image-20201209160216218.png)
+   ![image-20201209160216218](https://www.itdu.tech/image/image-20201209160216218.png)
 
 #### 单链表(LinkList)
 
@@ -74,11 +74,11 @@ typedef struct
 
 第一个cur存储空闲空间第一个结点的下标，最后一个cur存储第一个元素的下标
 
-![image-20210418220357626](https://coderdu.com/image/image-20210418220357626.png)
+![image-20210418220357626](https://www.itdu.tech/image/image-20210418220357626.png)
 
 第一个cur指向备用链表的第一个结点，最后一个cur指向第一个数据
 
-![image-20210418220439032](https://coderdu.com/image/image-20210418220439032.png)
+![image-20210418220439032](https://www.itdu.tech/image/image-20210418220439032.png)
 
 >   优点：
 >

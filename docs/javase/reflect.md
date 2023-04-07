@@ -43,7 +43,7 @@ public class Test {
 }
 ```
 
-![image-20220114203249294](https://coderdu.com/image/image-20220114203249294.png)
+![image-20220114203249294](https://www.itdu.tech/image/image-20220114203249294.png)
 
 2、通过目标类的 class 创建，Java 中的每一个类都可以调用类.class，class 不是属性也不是方法，叫做“类字面量”，作用是获取内存中目标类型对象的引用（类的结构）。
 

@@ -13,4 +13,4 @@ tags:
 
 非线性数据结构分为：树、堆、散列表、图
 
-![image-20210415205333580](https://coderdu.com/image/image-20210415205333580.png)
+![image-20210415205333580](https://www.itdu.tech/image/image-20210415205333580.png)

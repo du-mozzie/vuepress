@@ -25,7 +25,7 @@ tags:
 
 ### 6.3.1. 代码架构图
 
-![image-20220223131106064](https://coderdu.com/image/image-20220223131106064.png)
+![image-20220223131106064](https://www.itdu.tech/image/image-20220223131106064.png)
 
 ### 6.3.2. 消息 TTL 过期
 
@@ -104,11 +104,11 @@ public class C1 {
 }
 ```
 
-![image-20220224095637413](https://coderdu.com/image/image-20220224095637413.png)
+![image-20220224095637413](https://www.itdu.tech/image/image-20220224095637413.png)
 
-![image-20220224095645328](https://coderdu.com/image/image-20220224095645328.png)
+![image-20220224095645328](https://www.itdu.tech/image/image-20220224095645328.png)
 
-![image-20220224095654135](https://coderdu.com/image/image-20220224095654135.png)
+![image-20220224095654135](https://www.itdu.tech/image/image-20220224095654135.png)
 
 消费者2(以上步骤完成后 启动 C2 消费者 它消费死信队列里面的消息)
 
@@ -129,7 +129,7 @@ public class C2 {
 }
 ```
 
-![image-20220224100005480](https://coderdu.com/image/image-20220224100005480.png)
+![image-20220224100005480](https://www.itdu.tech/image/image-20220224100005480.png)
 
 ### 6.3.3. 队列达到最大长度
 
@@ -137,23 +137,23 @@ public class C2 {
 
 生产者去掉TTL属性
 
-![image-20220224100601412](https://coderdu.com/image/image-20220224100601412.png)
+![image-20220224100601412](https://www.itdu.tech/image/image-20220224100601412.png)
 
 添加normal_queue队列最大长度
 
-![image-20220224100457674](https://coderdu.com/image/image-20220224100457674.png)
+![image-20220224100457674](https://www.itdu.tech/image/image-20220224100457674.png)
 
 测试之前需要把原来的队列删除，因为属性变了
 
-![image-20220224103321181](https://coderdu.com/image/image-20220224103321181.png)
+![image-20220224103321181](https://www.itdu.tech/image/image-20220224103321181.png)
 
-![image-20220224103412594](https://coderdu.com/image/image-20220224103412594.png)
+![image-20220224103412594](https://www.itdu.tech/image/image-20220224103412594.png)
 
 ### 6.3.4. 消息被拒
 
 1. 取消设置normal_queue队列的长度
 
-![image-20220224111015423](https://coderdu.com/image/image-20220224111015423.png)
+![image-20220224111015423](https://www.itdu.tech/image/image-20220224111015423.png)
 
 2. 修改消费者1代码，拒收第一条消息
 
@@ -175,18 +175,18 @@ public class C2 {
 
 4. 运行生产者代码
 
-![image-20220224123811585](https://coderdu.com/image/image-20220224123811585.png)
+![image-20220224123811585](https://www.itdu.tech/image/image-20220224123811585.png)
 
 5. 启动消费者1
 
-![image-20220224125127160](https://coderdu.com/image/image-20220224125127160.png)
+![image-20220224125127160](https://www.itdu.tech/image/image-20220224125127160.png)
 
 `消费者1`拒收了一条消息，这条消息被加入到死信队列中
 
-![image-20220224125153434](https://coderdu.com/image/image-20220224125153434.png)
+![image-20220224125153434](https://www.itdu.tech/image/image-20220224125153434.png)
 
 6. 启动消费者2
 
-![image-20220224125303590](https://coderdu.com/image/image-20220224125303590.png)
+![image-20220224125303590](https://www.itdu.tech/image/image-20220224125303590.png)
 
 `消费者2`接收到刚刚`消费者1`拒收的消息

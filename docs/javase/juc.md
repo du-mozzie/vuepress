@@ -70,7 +70,7 @@ Java 默认的线程数 2 个
 
 Java 本身是无法开启线程的，Java 无法操作硬件，只能通过调用本地方法，C++ 编写的动态函数库。
 
-![image-20220114200558061](https://coderdu.com/image/image-20220114200558061.png)
+![image-20220114200558061](https://www.itdu.tech/image/image-20220114200558061.png)
 
 > Java 中实现多线程有几种方式？
 
@@ -110,7 +110,7 @@ class MyCallable implements Callable<String>{
 }
 ```
 
-![image-20220114200619150](https://coderdu.com/image/image-20220114200619150.png)
+![image-20220114200619150](https://www.itdu.tech/image/image-20220114200619150.png)
 
 ### 4、sleep 和 wait
 
@@ -130,7 +130,7 @@ sleep 不会释放锁，wait 会释放锁。
 
 JUC 提供的一种锁机制，功能和 synchronized 类似，是对 synchronized 的升级，它是一个接口。
 
-![image-20220114200632710](https://coderdu.com/image/image-20220114200632710.png)
+![image-20220114200632710](https://www.itdu.tech/image/image-20220114200632710.png)
 
 它的常用实现类是 ReentrantLock。
 
@@ -430,7 +430,7 @@ public class Test {
 
 ##### 1、Vector
 
-![image-20220114200952870](https://coderdu.com/image/image-20220114200952870.png)
+![image-20220114200952870](https://www.itdu.tech/image/image-20220114200952870.png)
 
 ##### 2、Collections.synchronizedList
 
@@ -457,7 +457,7 @@ public class Test2 {
 
 CopyOnWrite 写时复制，当我们往一个容器添加元素的时候，不是直接给容器添加，而是先将当前容器复制一份，向新的容器中添加数据，添加完成之后，再将原容器的引用指向新的容器。
 
-![image-20220114201025478](https://coderdu.com/image/image-20220114201025478.png)
+![image-20220114201025478](https://www.itdu.tech/image/image-20220114201025478.png)
 
 ##### 4、Set
 
@@ -752,7 +752,7 @@ corePoolSize 就是线程池的大小，maximumPoolSize 是一种补救措施，
 
 如果线程池已经达到了最大上限，并且等待队列也占满了，此时如果有新的任务进来，只能选择拒绝，并且需要根据拒绝策略来选择对应的方案。
 
-![image-20220114201200424](https://coderdu.com/image/image-20220114201200424.png)
+![image-20220114201200424](https://www.itdu.tech/image/image-20220114201200424.png)
 
 ThreadPoolExecutor
 
@@ -777,15 +777,15 @@ RejectedExecutionHandler：拒绝策略
 
 单例 1
 
-![image-20220114201217038](https://coderdu.com/image/image-20220114201217038.png)
+![image-20220114201217038](https://www.itdu.tech/image/image-20220114201217038.png)
 
 固定 5
 
-![image-20220114201229098](https://coderdu.com/image/image-20220114201229098.png)
+![image-20220114201229098](https://www.itdu.tech/image/image-20220114201229098.png)
 
 缓存
 
-![image-20220114201242673](https://coderdu.com/image/image-20220114201242673.png)
+![image-20220114201242673](https://www.itdu.tech/image/image-20220114201242673.png)
 
 ```java
 public class Test {
@@ -826,15 +826,15 @@ public class Test {
 
 ```
 
-![image-20220114201300145](https://coderdu.com/image/image-20220114201300145.png)
+![image-20220114201300145](https://www.itdu.tech/image/image-20220114201300145.png)
 
 new ThreadPoolExecutor.AbortPolicy()
 
-![image-20220114201357327](https://coderdu.com/image/image-20220114201357327.png)
+![image-20220114201357327](https://www.itdu.tech/image/image-20220114201357327.png)
 
 new ThreadPoolExecutor.CallersunsPolicy()
 
-![image-20220114201429758](https://coderdu.com/image/image-20220114201429758.png)
+![image-20220114201429758](https://www.itdu.tech/image/image-20220114201429758.png)
 
 new ThreadPoolExecutor.DiscardOldestPolicy()
 
@@ -879,14 +879,14 @@ ForkJoin 是 JDK 1.7 后发布的多线程并发处理框架，功能上和 JUC 
 
 本质上是对线程池的一种的补充，对线程池功能的一种扩展，基于线程池的，它的核心思想就是将一个大型的任务拆分成很多个小任务，分别执行，最终将小任务的结果进行汇总，生成最终的结果。
 
-![image-20220114201507075](https://coderdu.com/image/image-20220114201507075.png)
+![image-20220114201507075](https://www.itdu.tech/image/image-20220114201507075.png)
 
 本质就是把一个线程的任务拆分成多个小任务，然后由多个线程并发执行，最终将结果进行汇总。
 
 比如 A B 两个线程同时还执行，A 的任务比较多，B 的任务相对较少，B 先执行完毕，这时候 B 去帮助 A 完成任务（将 A 的一部分任务拿过来替 A 执行，执行完毕之后再把结果进行汇总），从而提高效率。
 
 **工作窃取**
-![image-20220114201558447](https://coderdu.com/image/image-20220114201558447.png)
+![image-20220114201558447](https://www.itdu.tech/image/image-20220114201558447.png)
 
 ForkJoin 框架，核心是两个类
 
@@ -897,7 +897,7 @@ ForkJoin 框架，核心是两个类
 
 1、需要创建一个 ForkJoinTask 任务，ForkJoinTask 是一个抽象类，不能直接创建 ForkJoinTask 的实例化对象，开发者需要自定义一个类，继承 ForkJoinTask 的子类 RecursiveTask ，Recursive 就是递归的意思，该类就提供了实现递归的功能。
 
-![image-20220114201628228](https://coderdu.com/image/image-20220114201628228.png)
+![image-20220114201628228](https://www.itdu.tech/image/image-20220114201628228.png)
 
 ```java
 /**
@@ -957,7 +957,7 @@ public class Test {
 
 ### 14、Volatile 关键字
 
-![image-20220114201657139](https://coderdu.com/image/image-20220114201657139.png)
+![image-20220114201657139](https://www.itdu.tech/image/image-20220114201657139.png)
 
 Volatile 是 JVM 提供的轻量级同步机制，**可见性**，主内存对象线程可见。
 

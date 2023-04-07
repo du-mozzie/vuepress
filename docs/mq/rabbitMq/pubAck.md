@@ -19,7 +19,7 @@ tags:
 
 ​		发布确认默认是没有开启的，如果要开启需要调用方法 confirmSelect，每当你要想使用发布确认，都需要在 channel 上调用该方法  
 
-![image-20220124072028903](https://coderdu.com/image/image-20220124072028903.png)
+![image-20220124072028903](https://www.itdu.tech/image/image-20220124072028903.png)
 
 ### 4.2.2. 单个确认发布
 
@@ -54,7 +54,7 @@ public static void publishMessageSingle() throws Exception {
 }
 ```
 
-![image-20220124074158216](https://coderdu.com/image/image-20220124074158216.png)
+![image-20220124074158216](https://www.itdu.tech/image/image-20220124074158216.png)
 
 ### 4.2.3. 批量确认发布
 
@@ -88,13 +88,13 @@ public static void publishMessageBatch() throws Exception {
 }
 ```
 
-![image-20220124082313135](https://coderdu.com/image/image-20220124082313135.png)
+![image-20220124082313135](https://www.itdu.tech/image/image-20220124082313135.png)
 
 ### 4.2.4. 异步确认发布
 
 ​		异步确认虽然编程逻辑比上两个要复杂，但是性价比最高，无论是可靠性还是效率都没得说，他是利用回调函数来达到消息可靠性传递的，这个中间件也是通过函数回调来保证是否投递成功。
 
-![image-20220124085544672](https://coderdu.com/image/image-20220124085544672.png)
+![image-20220124085544672](https://www.itdu.tech/image/image-20220124085544672.png)
 
 ```java
 /**
@@ -162,7 +162,7 @@ public static void publishMessageAsync() throws Exception {
 }
 ```
 
-![image-20220124093026136](https://coderdu.com/image/image-20220124093026136.png)
+![image-20220124093026136](https://www.itdu.tech/image/image-20220124093026136.png)
 
 ### 4.2.5. 如何处理异步未确认消息
 

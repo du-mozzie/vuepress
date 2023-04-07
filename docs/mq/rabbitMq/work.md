@@ -9,7 +9,7 @@ tags:
 
 工作队列(又称任务队列)的主要思想是避免立即执行资源密集型任务，而不得不等待它完成。相反我们安排任务在之后执行。我们把任务封装为消息并将其发送到队列。在后台运行的工作进程将弹出任务并最终执行作业。 当有多个工作线程时，这些工作线程将一起处理这些任务。  
 
-![image-20220121173501919](https://coderdu.com/image/image-20220121173501919.png)
+![image-20220121173501919](https://www.itdu.tech/image/image-20220121173501919.png)
 
 ## 3.1. 轮训分发消息
 
@@ -63,13 +63,13 @@ public static void main(String[] args) throws Exception {
 
 idea设置运行启动多个实例
 
-![image-20220121203504145](https://coderdu.com/image/image-20220121203504145.png)
+![image-20220121203504145](https://www.itdu.tech/image/image-20220121203504145.png)
 
 启动两个消费者
 
-![image-20220121203649436](https://coderdu.com/image/image-20220121203649436.png)
+![image-20220121203649436](https://www.itdu.tech/image/image-20220121203649436.png)
 
-![image-20220121203704871](https://coderdu.com/image/image-20220121203704871.png)
+![image-20220121203704871](https://www.itdu.tech/image/image-20220121203704871.png)
 
 ### 3.1.3. 启动一个发送线程
 
@@ -102,11 +102,11 @@ public static void main(String[] args) throws Exception {
 }
 ```
 
-​	**消费者1收到消息**![image-20220121203810770](https://coderdu.com/image/image-20220121203810770.png)
+​	**消费者1收到消息**![image-20220121203810770](https://www.itdu.tech/image/image-20220121203810770.png)
 
 **消费者2收到消息**
 
-![image-20220121203844610](https://coderdu.com/image/image-20220121203844610.png)
+![image-20220121203844610](https://www.itdu.tech/image/image-20220121203844610.png)
 
 `消费者收消息是以轮询的方式来接收，先启动的消费者先接收消息，一次一条消息，轮询接收`
 
@@ -139,7 +139,7 @@ C.Channel.basicReject(用于否定确认)
 
 手动应答的好处是可以批量应答并且减少网络拥堵
 
-![image-20220121205202034](https://coderdu.com/image/image-20220121205202034.png)
+![image-20220121205202034](https://www.itdu.tech/image/image-20220121205202034.png)
 
 multiple 的 true 和 false 代表不同意思
 
@@ -153,15 +153,15 @@ multiple 的 true 和 false 代表不同意思
 
 ​				只会应答 tag=8 的消息 5,6,7 这三个消息依然不会被确认收到消息应答  
 
-![image-20220121210447039](https://coderdu.com/image/image-20220121210447039.png)
+![image-20220121210447039](https://www.itdu.tech/image/image-20220121210447039.png)
 
-![image-20220121210503394](https://coderdu.com/image/image-20220121210503394.png)
+![image-20220121210503394](https://www.itdu.tech/image/image-20220121210503394.png)
 
 ### 3.2.5. 消息自动重新入队
 
 如果消费者由于某些原因失去连接(其通道已关闭，连接已关闭或 TCP 连接丢失)， 导致消息未发送 ACK 确认， RabbitMQ 将了解到消息未完全处理，并将对其重新排队。如果此时其他消费者可以处理，它将很快将其重新分发给另一个消费者。这样，即使某个消费者偶尔死亡，也可以确保不会丢失任何消息。  
 
-![image-20220121210616801](https://coderdu.com/image/image-20220121210616801.png)
+![image-20220121210616801](https://www.itdu.tech/image/image-20220121210616801.png)
 
 ### 3.2.6. 消息手动应答
 
@@ -261,23 +261,23 @@ public static void main(String[] args) throws Exception {
 
 我们发送第一条消息，消费者1接收到第一条消息
 
-![image-20220123175635108](https://coderdu.com/image/image-20220123175635108.png)
+![image-20220123175635108](https://www.itdu.tech/image/image-20220123175635108.png)
 
 发送第二条消息，此时因为消费者2等待30秒接收消息，这个时候将消费者2进程关闭
 
-![image-20220123175644749](https://coderdu.com/image/image-20220123175644749.png)
+![image-20220123175644749](https://www.itdu.tech/image/image-20220123175644749.png)
 
-![image-20220123175742573](https://coderdu.com/image/image-20220123175742573.png)
+![image-20220123175742573](https://www.itdu.tech/image/image-20220123175742573.png)
 
 可以看到消息重新发给了消费者1，消费者1收到消息
 
-![image-20220123180440648](https://coderdu.com/image/image-20220123180440648.png)
+![image-20220123180440648](https://www.itdu.tech/image/image-20220123180440648.png)
 
 在发送者发送消息 dd，发出消息之后的把 C2 消费者停掉，按理说该 C2 来处理该消息，但是由于它处理时间较长，在还未处理完，也就是说 C2 还没有执行 ack 代码的时候， C2 被停掉了，此时会看到消息被 C1 接收到了，说明消息 dd 被重新入队，然后分配给能处理消息的 C1 处理了
 
-![image-20220123180537145](https://coderdu.com/image/image-20220123180537145.png)
+![image-20220123180537145](https://www.itdu.tech/image/image-20220123180537145.png)
 
-![image-20220123180557085](https://coderdu.com/image/image-20220123180557085.png)
+![image-20220123180557085](https://www.itdu.tech/image/image-20220123180557085.png)
 
 ## 3.3. RabbitMQ 持久化  
 
@@ -289,7 +289,7 @@ public static void main(String[] args) throws Exception {
 
 之前我们创建的队列都是非持久化的， rabbitmq 如果重启的化，该队列就会被删除掉，如果要队列实现持久化 需要在声明队列的时候把 durable 参数设置为持久化
 
-![image-20220123182809159](https://coderdu.com/image/image-20220123182809159.png)
+![image-20220123182809159](https://www.itdu.tech/image/image-20220123182809159.png)
 
 **如果我们之前对应的队列不是持久化的需要先删掉它，不然会报错**
 
@@ -299,19 +299,19 @@ Caused by: com.rabbitmq.client.ShutdownSignalException: channel error; protocol 
 
 进入队列详情可以删除队列
 
-![image-20220123183412858](https://coderdu.com/image/image-20220123183412858.png)
+![image-20220123183412858](https://www.itdu.tech/image/image-20220123183412858.png)
 
 如果有持久化会在Features(特性)添加一个D
 
-![image-20220123183255960](https://coderdu.com/image/image-20220123183255960.png)
+![image-20220123183255960](https://www.itdu.tech/image/image-20220123183255960.png)
 
-![image-20220123183703564](https://coderdu.com/image/image-20220123183703564.png)
+![image-20220123183703564](https://www.itdu.tech/image/image-20220123183703564.png)
 
 ### 3.3.3. 消息实现持久化
 
 要想让消息实现持久化需要在消息生产者修改代码， MessageProperties.PERSISTENT_TEXT_PLAIN 添加这个属性。  
 
-![image-20220123184123876](https://coderdu.com/image/image-20220123184123876.png)
+![image-20220123184123876](https://www.itdu.tech/image/image-20220123184123876.png)
 
 ​		将消息标记为持久化并不能完全保证不会丢失消息。尽管它告诉 RabbitMQ 将消息保存到磁盘，但是这里依然存在当消息刚准备存储在磁盘的时候 但是还没有存储完，消息还在缓存的一个间隔点。此时并没有真正写入磁盘。持久性保证并不强，但是对于我们的简单任务队列而言，这已经绰绰有余了。  
 
@@ -323,11 +323,11 @@ Caused by: com.rabbitmq.client.ShutdownSignalException: channel error; protocol 
 
 ​		channel.basicQos(1)指该消费者在接收到队列里的消息但没有返回确认结果之前,队列不会将新的消息分发给该消费者。队列中没有被消费的消息不会被删除，还是存在于队列中。
 
-![image-20220123202539564](https://coderdu.com/image/image-20220123202539564.png)
+![image-20220123202539564](https://www.itdu.tech/image/image-20220123202539564.png)
 
-![image-20220123202759778](https://coderdu.com/image/image-20220123202759778.png)
+![image-20220123202759778](https://www.itdu.tech/image/image-20220123202759778.png)
 
-![image-20220123202809985](https://coderdu.com/image/image-20220123202809985.png)
+![image-20220123202809985](https://www.itdu.tech/image/image-20220123202809985.png)
 
 ​		意思就是如果这个任务我还没有处理完或者我还没有应答你，你先别分配给我，我目前只能处理一个任务，然后 rabbitmq 就会把该任务分配给没有那么忙的那个空闲消费者，当然如果所有的消费者都没有完成手上任务，队列还在不停的添加新任务，队列有可能就会遇到队列被撑满的情况，这个时候就只能添加新的 worker 或者改变其他存储任务的策略。
 
@@ -342,4 +342,4 @@ Caused by: com.rabbitmq.client.ShutdownSignalException: channel error; protocol 
 channel.basicQos(prefetchCount);
 ```
 
-![image-20220123203002229](https://coderdu.com/image/image-20220123203002229.png)
+![image-20220123203002229](https://www.itdu.tech/image/image-20220123203002229.png)

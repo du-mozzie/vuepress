@@ -23,13 +23,13 @@ MQ(message queue)，从字面意思上看，本质是个队列， FIFO 先入先
 
 以电商应用为例，应用中有订单系统、库存系统、物流系统、支付系统。用户创建订单后，如果耦合调用库存系统、物流系统、支付系统，任何一个子系统出了故障，都会造成下单操作异常。当转变成基于消息队列的方式后，系统间调用的问题会减少很多，比如物流系统因为发生故障，需要几分钟来修复。在这几分钟的时间里，物流系统要处理的内存被缓存在消息队列中，用户的下单操作可以正常完成。当物流系统恢复后，继续处理订单信息即可，中单用户感受不到物流系统的故障， 提升系统的可用性。
 
-![image-20220121141633627](https://coderdu.com/image/image-20220121141633627.png)
+![image-20220121141633627](https://www.itdu.tech/image/image-20220121141633627.png)
 
 #### 3.异步处理
 
 有些服务间调用是异步的，例如 A 调用 B， B 需要花费很长时间执行，但是 A 需要知道 B 什么时候可以执行完，以前一般有两种方式， A 过一段时间去调用 B 的查询 api 查询。或者 A 提供一个 callback api，B 执行完之后调用 api 通知 A 服务。这两种方式都不是很优雅， 使用消息总线，可以很方便解决这个问题，A 调用 B 服务后，只需要监听 B 处理完成的消息，当 B 处理完成后，会发送一条消息给 MQ， MQ 会将此消息转发给 A 服务。这样 A 服务既不用循环调用 B 的查询 api，也不用提供 callback api。同样 B 服务也不用做这些操作。 A 服务还能及时的得到异步处理成功的消息。  
 
-![image-20220121141704195](https://coderdu.com/image/image-20220121141704195.png)
+![image-20220121141704195](https://www.itdu.tech/image/image-20220121141704195.png)
 
 ### 1.1.3. MQ 的分类
 
@@ -105,11 +105,11 @@ RabbitMQ 是一个消息中间件：它接受并转发消息。你可以把它�
 
 ### 1.2.3. RabbitMQ 核心部分 
 
-![image-20220121142733140](https://coderdu.com/image/image-20220121142733140.png)
+![image-20220121142733140](https://www.itdu.tech/image/image-20220121142733140.png)
 
 ### 1.2.4. 各个名词介绍  
 
-![image-20220121142750943](https://coderdu.com/image/image-20220121142750943.png)
+![image-20220121142750943](https://www.itdu.tech/image/image-20220121142750943.png)
 
 **Broker**：接收和分发消息的应用， RabbitMQ Server 就是 Message Broker
 
@@ -133,7 +133,7 @@ RabbitMQ 是一个消息中间件：它接受并转发消息。你可以把它�
 2. 文件上传
     上传到/usr/local/software 目录下(如果没有 software 需要自己创建)  
 
-    ![image-20220121144536518](https://coderdu.com/image/image-20220121144536518.png)
+    ![image-20220121144536518](https://www.itdu.tech/image/image-20220121144536518.png)
 
 3. 安装文件
 
@@ -175,7 +175,7 @@ RabbitMQ 是一个消息中间件：它接受并转发消息。你可以把它�
     /sbin/service rabbitmq-server status
     ```
 
-    ![image-20220121145010590](https://coderdu.com/image/image-20220121145010590.png)
+    ![image-20220121145010590](https://www.itdu.tech/image/image-20220121145010590.png)
 
     停止服务(选择执行)
 
@@ -201,7 +201,7 @@ RabbitMQ 是一个消息中间件：它接受并转发消息。你可以把它�
 
     用默认账号密码(guest)访问地址 http://192.168.10.40:15672/出现权限问题  
 
-    ![image-20220121145341381](https://coderdu.com/image/image-20220121145341381.png)
+    ![image-20220121145341381](https://www.itdu.tech/image/image-20220121145341381.png)
 
 6. 添加一个新的用户
 

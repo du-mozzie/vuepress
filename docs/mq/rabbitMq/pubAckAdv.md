@@ -23,11 +23,11 @@ allow us to use it.||Consumer received fatal=false exception on startup:
 
 ### 8.1.1. 确认机制方案
 
-![image-20220226172032580](https://coderdu.com/image/image-20220226172032580.png)
+![image-20220226172032580](https://www.itdu.tech/image/image-20220226172032580.png)
 
 ### 8.1.2. 代码架构图
 
-![image-20220226172046157](https://coderdu.com/image/image-20220226172046157.png)
+![image-20220226172046157](https://www.itdu.tech/image/image-20220226172046157.png)
 
 ### 8.1.3. 配置文件
 
@@ -223,11 +223,11 @@ http://localhost:8080/confirm/sendMessage/hello
 
 成功发送，正常回调
 
-![image-20220227144341130](https://coderdu.com/image/image-20220227144341130.png)
+![image-20220227144341130](https://www.itdu.tech/image/image-20220227144341130.png)
 
 修改交换机名称，测试发送失败，确认回调，打印回调信息
 
-![image-20220227144454725](https://coderdu.com/image/image-20220227144454725.png)
+![image-20220227144454725](https://www.itdu.tech/image/image-20220227144454725.png)
 
 ```
 2022-02-27 14:44:36.886 ERROR 3292 --- [.168.10.40:5672] o.s.a.r.c.CachingConnectionFactory       : Shutdown Signal: channel error; protocol method: #method<channel.close>(reply-code=404, reply-text=NOT_FOUND - no exchange 'confirm.exchange123' in vhost '/', class-id=60, method-id=40)
@@ -257,7 +257,7 @@ rabbitTemplate.convertAndSend(
 log.info("key12发送消息：{}", "key12——" + message);
 ```
 
-![image-20220227150014135](https://coderdu.com/image/image-20220227150014135.png)
+![image-20220227150014135](https://www.itdu.tech/image/image-20220227150014135.png)
 
 发送了两条消息，第一条消息的 RoutingKey 为 "key1"，第二条消息的 RoutingKey 为"key12"，两条消息都成功被交换机接收，也收到了交换机的确认回调，但消费者只收到了一条消息，因为第二条消息的 RoutingKey 与队列的 BindingKey 不一致，也没有其它队列能接收这个消息，所有第二条消息被直接丢弃了。  
 
@@ -342,7 +342,7 @@ public class ConfirmCallBack implements RabbitTemplate.ConfirmCallback, RabbitTe
 
 http://localhost:8080/confirm/sendMessage/hello
 
-![image-20220227151503972](https://coderdu.com/image/image-20220227151503972.png)
+![image-20220227151503972](https://www.itdu.tech/image/image-20220227151503972.png)
 
 ## 8.3. 备份交换机
 
@@ -350,7 +350,7 @@ http://localhost:8080/confirm/sendMessage/hello
 
 ### 8.3.1. 代码架构图
 
-![image-20220227151620090](https://coderdu.com/image/image-20220227151620090.png)
+![image-20220227151620090](https://www.itdu.tech/image/image-20220227151620090.png)
 
 ### 8.3.2. 备份配置类
 
@@ -529,8 +529,8 @@ public class BackupConsumer {
 
 修改生产者，让交换机找不到确认队列的key，**消息必须到达确认交换机，当消息发送不到队列时，消息会被转发到备份交换机**
 
-![image-20220227162420741](https://coderdu.com/image/image-20220227162420741.png)
+![image-20220227162420741](https://www.itdu.tech/image/image-20220227162420741.png)
 
-![image-20220227162824377](https://coderdu.com/image/image-20220227162824377.png)
+![image-20220227162824377](https://www.itdu.tech/image/image-20220227162824377.png)
 
 **mandatory(消息回退)**参数与备份交换机可以一起使用的时候，如果两者同时开启，**备份交换机优先级高**
