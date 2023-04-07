@@ -76,7 +76,7 @@ module.exports = {
         {
           name: "水星记",
           artist: "郭顶",
-          url: "https://coderdu.com/music/%E6%B0%B4%E6%98%9F%E8%AE%B0.mp3",
+              url: "http://www.kumeiwp.com/sub/filestores/2022/02/23/997dd2538a28fbd875a786bb7482d2ef.mp3",
           cover: "http://p1.music.126.net/wSMfGvFzOAYRU_yVIfquAA==/2946691248081599.jpg?param=130y130",
         },
       ],
