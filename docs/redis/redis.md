@@ -65,25 +65,25 @@ redis-cli
 keys * # 查看数据库中所有的key
 ```
 
-![image-20210608195351415](https://www.itdu.tech/image/image-20210608195351415.png)
+![image-20210608195351415](https://www.coderdu.tech/image/image-20210608195351415.png)
 
 ```bash
 exists (key) # 查看key是否存在，返回值为key的数量
 ```
 
-![image-20210608195510061](https://www.itdu.tech/image/image-20210608195510061.png)
+![image-20210608195510061](https://www.coderdu.tech/image/image-20210608195510061.png)
 
 ```bash
 type (key) # 查看key是什么类型
 ```
 
-![image-20210608195614578](https://www.itdu.tech/image/image-20210608195614578.png)
+![image-20210608195614578](https://www.coderdu.tech/image/image-20210608195614578.png)
 
 ```bash
 del (key) # 删除key，返回删除个数
 ```
 
-![image-20210608195742144](https://www.itdu.tech/image/image-20210608195742144.png)
+![image-20210608195742144](https://www.coderdu.tech/image/image-20210608195742144.png)
 
 ```bash
 unlink (key) # 根据value选择非阻塞删除，先通知删除该key，后续在删除内存中的key，异步执行
@@ -93,13 +93,13 @@ unlink (key) # 根据value选择非阻塞删除，先通知删除该key，后续
 expire (key) (time) # 设置key的过期时间，单位秒
 ```
 
-![image-20210608200044843](https://www.itdu.tech/image/image-20210608200044843.png)
+![image-20210608200044843](https://www.coderdu.tech/image/image-20210608200044843.png)
 
 ```bash
 ttl (key) # 查看key过期时间，-1表示永不过期，-2表示已经过期
 ```
 
-![image-20210608200218937](https://www.itdu.tech/image/image-20210608200218937.png)
+![image-20210608200218937](https://www.coderdu.tech/image/image-20210608200218937.png)
 
 ### 库
 
@@ -107,20 +107,20 @@ ttl (key) # 查看key过期时间，-1表示永不过期，-2表示已经过期
 select (库序号) # 切换库，redis有16个库，默认是0
 ```
 
-![image-20210608200422509](https://www.itdu.tech/image/image-20210608200422509.png)
+![image-20210608200422509](https://www.coderdu.tech/image/image-20210608200422509.png)
 
 ```bash
 dbsize #查看当前数据库key的数量，返回个数
 ```
 
-![image-20210608200538584](https://www.itdu.tech/image/image-20210608200538584.png)
+![image-20210608200538584](https://www.coderdu.tech/image/image-20210608200538584.png)
 
 ```bash
 flushdb #清除当前库
 flushall #清除全部库
 ```
 
-![image-20210608200724046](https://www.itdu.tech/image/image-20210608200724046.png)
+![image-20210608200724046](https://www.coderdu.tech/image/image-20210608200724046.png)
 
 ### String(字符串)
 
@@ -132,19 +132,19 @@ Srting类型是Redis最基本的数据类型，一个Redis中字符串的value�
 set <key> <value> #设置一个key，value
 ```
 
-![image-20210608201205040](https://www.itdu.tech/image/image-20210608201205040.png)
+![image-20210608201205040](https://www.coderdu.tech/image/image-20210608201205040.png)
 
 ```bash
 get <key> #根据key获取value
 ```
 
-![image-20210608201144079](https://www.itdu.tech/image/image-20210608201144079.png)
+![image-20210608201144079](https://www.coderdu.tech/image/image-20210608201144079.png)
 
 ```bash
 append <key> <value> #在对应key的value后面追加数据，返回总长度
 ```
 
-![image-20210608201438649](https://www.itdu.tech/image/image-20210608201438649.png)
+![image-20210608201438649](https://www.coderdu.tech/image/image-20210608201438649.png)
 
 ```bash 
 strlen <key> #获取值的长度
@@ -156,25 +156,25 @@ strlen <key> #获取值的长度
 setnx <key> <value> #设置值，当键存在时不进行设置，键不存在才进行设置
 ```
 
-![image-20210608201640465](https://www.itdu.tech/image/image-20210608201640465.png)
+![image-20210608201640465](https://www.coderdu.tech/image/image-20210608201640465.png)
 
 ```bash
 incr <key> #将key中存储的值+1，返回增加后的值，只能对数字值进行操作，如果为空，新增值为1
 ```
 
-![image-20210608201951902](https://www.itdu.tech/image/image-20210608201951902.png)
+![image-20210608201951902](https://www.coderdu.tech/image/image-20210608201951902.png)
 
 ```bash
 decr <key> #将key中存储的值-1，返回减少后的值，只能对数字值进行操作，如果为空，新增值为-1
 ```
 
-![image-20210608202009173](https://www.itdu.tech/image/image-20210608202009173.png)
+![image-20210608202009173](https://www.coderdu.tech/image/image-20210608202009173.png)
 
 ```bash
 incrby/decrby <key> <步长> #将key中的值进行增减，长度为步长
 ```
 
-![image-20210608202320342](https://www.itdu.tech/image/image-20210608202320342.png)
+![image-20210608202320342](https://www.coderdu.tech/image/image-20210608202320342.png)
 
 `增减操作都是原子性操作：`Redis而言，命令的原子性指的是：一个操作的不可以再分，操作要么执行，要么不执行。
 
@@ -188,13 +188,13 @@ mset <key1> <value1> <key2> <value2> ... #同时对多对k-v进行赋值
 mget <key1> <key2> <key3> ... #同时获取多个value
 ```
 
-![image-20210608205325643](https://www.itdu.tech/image/image-20210608205325643.png)
+![image-20210608205325643](https://www.coderdu.tech/image/image-20210608205325643.png)
 
 ```bash
 msetnx <key1> <value1> <key2> <value2> ... #同时设置多对值，当值存在时不进行设置，值不存在才进行设置
 ```
 
-![image-20210608205433667](https://www.itdu.tech/image/image-20210608205433667.png)
+![image-20210608205433667](https://www.coderdu.tech/image/image-20210608205433667.png)
 
 msetnx同时设置多对值时，`原子性操作，要么都成功要么都不成功`
 
@@ -203,30 +203,30 @@ msetnx同时设置多对值时，`原子性操作，要么都成功要么都不�
 getrange <key> <起始位置> <结束位置>
 ```
 
-![image-20210608204654354](https://www.itdu.tech/image/image-20210608204654354.png)
+![image-20210608204654354](https://www.coderdu.tech/image/image-20210608204654354.png)
 
 ```bash
 #根据起始位置，将key中的值覆盖为value
 setrange <key> <起始位置> <value>
 ```
 
-![image-20210608204850347](https://www.itdu.tech/image/image-20210608204850347.png)
+![image-20210608204850347](https://www.coderdu.tech/image/image-20210608204850347.png)
 
 ```bash
 setex <key> <过期时间> <value> #设置k-v的同时设置过期时间，单位s
 ```
 
-![image-20210608205041973](https://www.itdu.tech/image/image-20210608205041973.png)
+![image-20210608205041973](https://www.coderdu.tech/image/image-20210608205041973.png)
 
 ```bash
 getset <key> <value> #设置新值的同时，获取旧值
 ```
 
-![image-20210608205208369](https://www.itdu.tech/image/image-20210608205208369.png)
+![image-20210608205208369](https://www.coderdu.tech/image/image-20210608205208369.png)
 
 String的底层结构为简单的动态字符串，内部结构类似与Java的ArrayList，才用预分配冗余空间的方式，来减少内存的频繁操作
 
-![image-20210608205748834](https://www.itdu.tech/image/image-20210608205748834.png)
+![image-20210608205748834](https://www.coderdu.tech/image/image-20210608205748834.png)
 
 内部为当前字符串实际分配的空间capacity一般要高于实际字符串长度len。当字符串长度小于1M时,扩容都是加倍现有的空间，如果超过1M，扩容时一次只会多扩1M的空间，需要注意的是字符串最大长度为512M
 
@@ -240,14 +240,14 @@ hash是一个string类型的field和value的映射表，hash特别适用于存�
 
 主要有以下两种存储方式：
 
-![image-20210609083637032](https://www.itdu.tech/image/image-20210609083637032.png)
+![image-20210609083637032](https://www.coderdu.tech/image/image-20210609083637032.png)
 
 1.  将对象系列化，存储序列化过后的对象，每次修改对象需要先反序列化，修改完数据后在序列化回去
 2.  普通键值对，键是用户id+属性标签，值是属性值，id数据冗余
 
 第三种方式：
 
-![image-20210609084123574](https://www.itdu.tech/image/image-20210609084123574.png)
+![image-20210609084123574](https://www.coderdu.tech/image/image-20210609084123574.png)
 
 `user为key，属性标签跟属性值是value`，存储方便，值的操作方便
 
@@ -257,55 +257,55 @@ hash是一个string类型的field和value的映射表，hash特别适用于存�
 hset <key> <filed> <value> [filed value..] #<key>是hash的键，<filed>是value的键,<value>是值，可以批量设置，如果hash的key不存在则创建新的hash，如果key存在则创建失败
 ```
 
-![image-20210609090246702](https://www.itdu.tech/image/image-20210609090246702.png)
+![image-20210609090246702](https://www.coderdu.tech/image/image-20210609090246702.png)
 
 ```bash
 hget <key> <filed> #根据filed获取value
 ```
 
-![image-20210609085303174](https://www.itdu.tech/image/image-20210609085303174.png)
+![image-20210609085303174](https://www.coderdu.tech/image/image-20210609085303174.png)
 
 ```bash
 hmset <key> <filed> <value> [filed value ..] #可以批量设置hash，如果key存在，filed相同则覆盖对应的value，否则创建一个新的hash
 ```
 
-![image-20210609090153249](https://www.itdu.tech/image/image-20210609090153249.png)
+![image-20210609090153249](https://www.coderdu.tech/image/image-20210609090153249.png)
 
 ```bash
 hmget <key> <filed> [filed ..] #批量获取value，如果filed不存在返回nil，存在返回对应的value
 ```
 
-![image-20210609090601964](https://www.itdu.tech/image/image-20210609090601964.png)
+![image-20210609090601964](https://www.coderdu.tech/image/image-20210609090601964.png)
 
 ```bash
 hexists <key> <filed> #判断对应的key是否存在filed
 ```
 
-![image-20210609090842631](https://www.itdu.tech/image/image-20210609090842631.png)
+![image-20210609090842631](https://www.coderdu.tech/image/image-20210609090842631.png)
 
 ```bash
 hkeys <key> #查询对应的key的所有filed
 ```
 
-![image-20210609091359018](https://www.itdu.tech/image/image-20210609091359018.png)
+![image-20210609091359018](https://www.coderdu.tech/image/image-20210609091359018.png)
 
 ```bash
 hvals <key> #查询对应key的所有value
 ```
 
-![image-20210609091406370](https://www.itdu.tech/image/image-20210609091406370.png)
+![image-20210609091406370](https://www.coderdu.tech/image/image-20210609091406370.png)
 
 ```bash
 hincrby <key> <field> <increment> #为hash的key中的field的值增加或减少increment
 ```
 
-![image-20210609091540299](https://www.itdu.tech/image/image-20210609091540299.png)
+![image-20210609091540299](https://www.coderdu.tech/image/image-20210609091540299.png)
 
 ```bash
 hsetnx <key> <field> <value> #为对应key添加filed和value，只有filed不存在时才会成功
 ```
 
-![image-20210609091830402](https://www.itdu.tech/image/image-20210609091830402.png)
+![image-20210609091830402](https://www.coderdu.tech/image/image-20210609091830402.png)
 
 Hash类型对应的数据结构有两种：ziplist(压缩列表)，hashtable(哈希表)。当field-value长度较短且个数较少时，使用ziphash，否则使用hashtable
 
@@ -317,7 +317,7 @@ redis列表是简单的字符串列表，按照插入顺序排序，可以插入
 
 列表类型内部使用`双向链表`实现的，所以向列表两端添加元素的时间复杂度为O(1)，获取越接近两端的元素速度越快。但是使用链表的代价是通过索引访问元素比较慢。
 
-![image-20210608210412685](https://www.itdu.tech/image/image-20210608210412685.png)
+![image-20210608210412685](https://www.coderdu.tech/image/image-20210608210412685.png)
 
 >   命令
 

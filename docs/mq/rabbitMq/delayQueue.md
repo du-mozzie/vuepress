@@ -25,7 +25,7 @@ tags:
 
 ​		这些场景都有一个特点，需要在某个事件发生之后或者之前的指定时间点完成某一项任务，如：发生订单生成事件，在十分钟之后检查该订单支付状态，然后将未支付的订单进行关闭；看起来似乎使用定时任务，一直轮询数据，每秒查一次，取出需要被处理的数据，然后处理不就完事了吗？如果数据量比较少，确实可以这样做，比如：对于“如果账单一周内未支付则进行自动结算”这样的需求，如果对于时间不是严格限制，而是宽松意义上的一周，那么每天晚上跑个定时任务检查一下所有未支付的账单，确实也是一个可行的方案。但对于数据量比较大，并且时效性较强的场景，如：“订单十分钟内未支付则关闭“，短期内未支付的订单数据可能会有很多，活动期间甚至会达到百万甚至千万级别，对这么庞大的数据量仍旧使用轮询的方式显然是不可取的，很可能在一秒内无法完成所有订单的检查，同时会给数据库带来很大压力，无法满足业务要求而且性能低下。  
 
-![image-20220224125721389](https://www.itdu.tech/image/image-20220224125721389.png)
+![image-20220224125721389](https://www.coderdu.tech/image/image-20220224125721389.png)
 
 ## 7.3. RabbitMQ 中的 TTL
 
@@ -151,7 +151,7 @@ rabbitTemplate.convertAndSend(
                     .title("rabbitmq 接口文档")
                     .description("本文档描述了 rabbitmq 微服务接口定义")
                     .version("1.0")
-                    .contact(new Contact("Du", "https://www.www.itdu.tech/",
+                    .contact(new Contact("Du", "https://www.www.coderdu.tech/",
                             "2548425238@qq.com"))
                     .build();
         }
@@ -164,7 +164,7 @@ rabbitTemplate.convertAndSend(
 
 ​		创建两个队列 QA 和 QB，两者队列 TTL 分别设置为 10S 和 40S，然后在创建一个交换机 X 和死信交换机 Y，它们的类型都是 direct，创建一个死信队列 QD，它们的绑定关系如下：
 
-![image-20220224130156457](https://www.itdu.tech/image/image-20220224130156457.png)
+![image-20220224130156457](https://www.coderdu.tech/image/image-20220224130156457.png)
 
 ### 7.5.2. 配置文件类代码
 
@@ -329,7 +329,7 @@ public class DeadLetterQueueConsumer {
 
 发送一个请求http://localhost:8080/ttl/send/hello
 
-![image-20220226151353907](https://www.itdu.tech/image/image-20220226151353907.png)
+![image-20220226151353907](https://www.coderdu.tech/image/image-20220226151353907.png)
 
 ​		第一条消息在 10S 后变成了死信消息，然后被消费者消费掉，第二条消息在 40S 之后变成了死信消息，然后被消费掉，这样一个延时队列就打造完成了。
 
@@ -341,7 +341,7 @@ public class DeadLetterQueueConsumer {
 
 在这里新增了一个队列 QC,绑定关系如下,该队列不设置 TTL 时间
 
-![image-20220226143845629](https://www.itdu.tech/image/image-20220226143845629.png)
+![image-20220226143845629](https://www.coderdu.tech/image/image-20220226143845629.png)
 
 ### 7.6.2. 配置文件代码
 
@@ -414,7 +414,7 @@ http://localhost:8080/ttl/sendExpirationMsg/hello1/20000
 
 http://localhost:8080/ttl/sendExpirationMsg/hello2/2000
 
-![image-20220226151634041](https://www.itdu.tech/image/image-20220226151634041.png)
+![image-20220226151634041](https://www.coderdu.tech/image/image-20220226151634041.png)
 
 ==存在一个问题：==
 
@@ -432,7 +432,7 @@ https://github.com/rabbitmq/rabbitmq-delayed-message-exchange/releases
 
 下载对应rabbitmq对应版本，ez后缀文件
 
-![image-20220226160952799](https://www.itdu.tech/image/image-20220226160952799.png)
+![image-20220226160952799](https://www.coderdu.tech/image/image-20220226160952799.png)
 
 进入 RabbitMQ 的安装目录下的 plugins目录，执行下面命令让该插件生效，然后重启 RabbitMQ  
 
@@ -441,7 +441,7 @@ cd /usr/lib/rabbitmq/lib/rabbitmq_server-3.8.8/plugins
 rabbitmq-plugins enable rabbitmq_delayed_message_exchange
 ```
 
-![image-20220226161142683](https://www.itdu.tech/image/image-20220226161142683.png)
+![image-20220226161142683](https://www.coderdu.tech/image/image-20220226161142683.png)
 
 重启rabbitmq
 
@@ -451,13 +451,13 @@ systemctl restart rabbitmq-server.service
 
 添加成功，去rabbitmq控制台添加交换机会有一个新的类型x-delayed-message
 
-![image-20220226161416952](https://www.itdu.tech/image/image-20220226161416952.png)
+![image-20220226161416952](https://www.coderdu.tech/image/image-20220226161416952.png)
 
 ### 7.7.2. 代码架构图
 
 在这里新增了一个队列 delayed.queue,一个自定义交换机 delayed.exchange，绑定关系如下:
 
-![image-20220226161447888](https://www.itdu.tech/image/image-20220226161447888.png)
+![image-20220226161447888](https://www.coderdu.tech/image/image-20220226161447888.png)
 
 ### 7.7.3. 配置文件类代码
 
@@ -587,11 +587,11 @@ http://localhost:8080/ttl/sendDelayMsg/hello2/2000
 
 基于死信的延迟队列流程
 
-![image-20220226162420154](https://www.itdu.tech/image/image-20220226162420154.png)
+![image-20220226162420154](https://www.coderdu.tech/image/image-20220226162420154.png)
 
 基于插件的延迟队列流程
 
-![image-20220226162408042](https://www.itdu.tech/image/image-20220226162408042.png)
+![image-20220226162408042](https://www.coderdu.tech/image/image-20220226162408042.png)
 
 ​		延时队列在需要延时处理的场景下非常有用，使用 RabbitMQ 来实现延时队列可以很好的利用RabbitMQ 的特性，如：消息可靠发送、消息可靠投递、死信队列来保障消息至少被消费一次以及未被正确处理的消息不会被丢弃。另外，通过 RabbitMQ 集群的特性，可以很好的解决单点故障问题，不会因为单个节点挂掉导致延时队列不可用或者消息丢失。
 

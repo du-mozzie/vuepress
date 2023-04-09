@@ -87,13 +87,13 @@ tags:
 
 >   叶子节点都在同一层并且除叶子节点外的所有节点都有两个子节点。
 
-![image-20210712153135194](https://www.itdu.tech/image/image-20210712153135194.png)满二叉树
+![image-20210712153135194](https://www.coderdu.tech/image/image-20210712153135194.png)满二叉树
 
 **完全二叉树**
 
 >   对于一颗二叉树，假设其深度为d（d>1）。除第d层外的所有节点构成满二叉树，且第d层所有节点从左向右连续地紧密排列，这样的二叉树被称为完全二叉树；
 
-![image-20210712153143568](https://www.itdu.tech/image/image-20210712153143568.png)完全二叉树
+![image-20210712153143568](https://www.coderdu.tech/image/image-20210712153143568.png)完全二叉树
 
 1.  叶子结点只能出现在最下两层。
 2.  最下层的叶子一定集中在左部连续位置。
@@ -103,9 +103,9 @@ tags:
 
 **完满二叉树**
 
-![image-20210712153156543](https://www.itdu.tech/image/image-20210712153156543.png)完满二叉树
+![image-20210712153156543](https://www.coderdu.tech/image/image-20210712153156543.png)完满二叉树
 
-![image-20210712153212846](https://www.itdu.tech/image/image-20210712153212846.png)
+![image-20210712153212846](https://www.coderdu.tech/image/image-20210712153212846.png)
 
 **哈夫曼树**
 
@@ -168,7 +168,7 @@ tags:
 >   3、除根结点以外的所有结点（不包括叶子结点）的度数正好是关键字总数加1，故**内部子树**个数 k 满足：┌m/2┐ <= k <= m ；
 >   4、所有的叶子结点都位于同一层。
 
-![image-20210712153222564](https://www.itdu.tech/image/image-20210712153222564.png)
+![image-20210712153222564](https://www.coderdu.tech/image/image-20210712153222564.png)
 
 >   B树(B-Tree)是一种自平衡的树,它是一种多路搜索树（并不是二叉的），能够保证数据有序。同时它还保证了在查找、插入、删除等操作时性能都能保持在`O(logn)`，为大块数据的读写操作做了优化,同时它也可以用来描述外部存储(支持对保存在磁盘或者网络上的符号表进行外部查找)
 
@@ -229,7 +229,7 @@ tags:
 
 （3）前序遍历右子树 。
 
-![image-20210714090259980](https://www.itdu.tech/image/image-20210714090259980.png) 
+![image-20210714090259980](https://www.coderdu.tech/image/image-20210714090259980.png) 
 
 需要注意的是：遍历左右子树时仍然采用前序遍历方法。
 
@@ -300,7 +300,7 @@ class Solution {
 
 （3）中序遍历右子树
 
-![image-20210714090354411](https://www.itdu.tech/image/image-20210714090354411.png) 
+![image-20210714090354411](https://www.coderdu.tech/image/image-20210714090354411.png) 
 
 如右图所示二叉树，中序遍历结果：DBEAFC
 
@@ -343,7 +343,7 @@ class Solution {
 
 （3）访问根结点
 
-![image-20210714090627833](https://www.itdu.tech/image/image-20210714090627833.png) 
+![image-20210714090627833](https://www.coderdu.tech/image/image-20210714090627833.png) 
 
 如右图所示二叉树
 
@@ -372,7 +372,7 @@ class Solution {
 
 层序遍历，就是按层，从上到下，从左到右遍历
 
-![image-20210714090911846](https://www.itdu.tech/image/image-20210714090911846.png) 
+![image-20210714090911846](https://www.coderdu.tech/image/image-20210714090911846.png) 
 
 >   递归
 
@@ -411,4 +411,4 @@ class Solution {
 
 #### 总结
 
-![image-20210712153235112](https://www.itdu.tech/image/image-20210712153235112.png)
+![image-20210712153235112](https://www.coderdu.tech/image/image-20210712153235112.png)

@@ -19,7 +19,7 @@ tags:
 
 ​		相反， **生产者只能将消息发送到交换机(exchange)**，交换机工作的内容非常简单， 一方面它接收来自生产者的消息，另一方面将它们推入队列。 交换机必须确切知道如何处理收到的消息。 是应该把这些消息放到特定队列还是说把他们到许多队列中还是说应该丢弃它们。 这就的由交换机的类型来决定。  
 
-![image-20220124203233880](https://www.itdu.tech/image/image-20220124203233880.png)
+![image-20220124203233880](https://www.coderdu.tech/image/image-20220124203233880.png)
 
 ### 5.1.2. Exchanges 的类型
 
@@ -31,7 +31,7 @@ tags:
 
 之前能实现将消息发送到队列的原因是因为我们使用的是默认交换，我们通过空字符串(“”)进行标识。  
 
-![image-20220124203954470](https://www.itdu.tech/image/image-20220124203954470.png)
+![image-20220124203954470](https://www.coderdu.tech/image/image-20220124203954470.png)
 
 第一个参数是交换机的名称。空字符串表示默认或无名称交换机： 消息能路由发送到队列中其实是由 routingKey(bindingkey)绑定 key 指定的，如果它存在的话。
 
@@ -49,13 +49,13 @@ String queueName = channel.queueDeclare().getQueue();
 
 创建出来之后长成这样  
 
-![image-20220124204157833](https://www.itdu.tech/image/image-20220124204157833.png)
+![image-20220124204157833](https://www.coderdu.tech/image/image-20220124204157833.png)
 
 ## 5.3. 绑定(bindings) 
 
 ​		什么是 bingding 呢， binding 其实是 exchange 和 queue 之间的桥梁，它告诉我们 exchange 和那个队列进行了绑定关系。比如说下面这张图告诉我们的就是 X 与 Q1 和 Q2 进行了绑定
 
-![image-20220124204456689](https://www.itdu.tech/image/image-20220124204456689.png)
+![image-20220124204456689](https://www.coderdu.tech/image/image-20220124204456689.png)
 
 ## 5.4. Fanout
 
@@ -63,15 +63,15 @@ String queueName = channel.queueDeclare().getQueue();
 
 ​		Fanout 这种类型非常简单。正如从名称中猜到的那样，它是将接收到的所有消息**广播**到它知道的所有队列中。 系统中默认有些 exchange 类型
 
-![image-20220124204822701](https://www.itdu.tech/image/image-20220124204822701.png)
+![image-20220124204822701](https://www.coderdu.tech/image/image-20220124204822701.png)
 
 ### 5.4.2. Fanout 实战
 
-![image-20220124210220485](https://www.itdu.tech/image/image-20220124210220485.png)
+![image-20220124210220485](https://www.coderdu.tech/image/image-20220124210220485.png)
 
 Logs 和临时队列的绑定关系如下图
 
-![image-20220124210329086](https://www.itdu.tech/image/image-20220124210329086.png)
+![image-20220124210329086](https://www.coderdu.tech/image/image-20220124210329086.png)
 
 ReceiveLogs01 将接收到的消息打印在控制台
 
@@ -161,7 +161,7 @@ public static void main(String[] args) throws Exception {
 
 direct这种类型的工作方式是，消息只去到它绑定的routingKey 队列中去  
 
-![image-20220214205003130](https://www.itdu.tech/image/image-20220214205003130.png)
+![image-20220214205003130](https://www.coderdu.tech/image/image-20220214205003130.png)
 
 ​		在上面这张图中，我们可以看到 X 绑定了两个队列，绑定类型是 direct。队列 Q1 绑定键为 orange，队列 Q2 绑定键有两个：一个绑定键为 black，另一个绑定键为 green。
 
@@ -169,15 +169,15 @@ direct这种类型的工作方式是，消息只去到它绑定的routingKey 队
 
 ### 5.5.3. 多重绑定
 
-![image-20220222205804358](https://www.itdu.tech/image/image-20220222205804358.png)
+![image-20220222205804358](https://www.coderdu.tech/image/image-20220222205804358.png)
 
 ​		当然如果 exchange 的绑定类型是 direct， 但是它绑定的多个队列的 key 如果都相同，在这种情况下虽然绑定类型是 direct 但是它表现的就和 fanout 有点类似了，就跟广播差不多，如上图所示。  
 
 ### 5.5.4. 实战
 
-![image-20220222205848493](https://www.itdu.tech/image/image-20220222205848493.png)
+![image-20220222205848493](https://www.coderdu.tech/image/image-20220222205848493.png)
 
-![image-20220222212829501](https://www.itdu.tech/image/image-20220222212829501.png)
+![image-20220222212829501](https://www.coderdu.tech/image/image-20220222212829501.png)
 
 ==生产者==
 
@@ -284,7 +284,7 @@ public class ReceiveLogsDirect02 {
 
 ​				第一个单词是 lazy 的多个单词(lazy.#)  
 
-![image-20220222213556226](https://www.itdu.tech/image/image-20220222213556226.png)
+![image-20220222213556226](https://www.coderdu.tech/image/image-20220222213556226.png)
 
 上图是一个队列绑定关系图，我们来看看他们之间数据接收情况是怎么样的
 
@@ -306,7 +306,7 @@ public class ReceiveLogsDirect02 {
 
 ### 5.6.3. 实战
 
-![image-20220223120130848](https://www.itdu.tech/image/image-20220223120130848.png)
+![image-20220223120130848](https://www.coderdu.tech/image/image-20220223120130848.png)
 
 ==生产者==
 

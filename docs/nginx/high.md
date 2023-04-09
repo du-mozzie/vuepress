@@ -11,7 +11,7 @@ tags:
 
 **nginx宕机，请求无法生效**
 
-![image-20210626131551343](https://www.itdu.tech/image//image-20210626131551343.png)
+![image-20210626131551343](https://www.coderdu.tech/image//image-20210626131551343.png)
 
 **高可用**
 
@@ -19,7 +19,7 @@ tags:
 2.  需要keepalived
 3.  需要虚拟ip
 
-![image-20210626132214392](https://www.itdu.tech/image//image-20210626132214392.png)
+![image-20210626132214392](https://www.coderdu.tech/image//image-20210626132214392.png)
 
 1. 在两台服务器安装nginx、keepalived
 

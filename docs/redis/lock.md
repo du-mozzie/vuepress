@@ -29,7 +29,7 @@ tags:
 
     开启缓存
 
-    ![image-20210626170623784](https://www.itdu.tech/image/image-20210626170623784.png)
+    ![image-20210626170623784](https://www.coderdu.tech/image/image-20210626170623784.png)
 
 2. Controller层加锁，使用StringRedisTemplate
 
@@ -162,9 +162,9 @@ Redisson是Redis服务器上的分布式可伸缩Java数据结构----驻内存�
 
 **看门狗，redisson不指定leaseTime，默认创建一个30秒的看门狗。**
 
-![image-20210629093557825](https://www.itdu.tech/image/image-20210629093557825.png)
+![image-20210629093557825](https://www.coderdu.tech/image/image-20210629093557825.png)
 
-![image-20210629211950555](https://www.itdu.tech/image/image-20210629211950555.png)
+![image-20210629211950555](https://www.coderdu.tech/image/image-20210629211950555.png)
 
 **核心源码**
 

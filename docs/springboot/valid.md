@@ -102,7 +102,7 @@ bindingResult.getFieldError.getDefaultMessage()⽤于获取相应字段上校验
     private String phone;
     ```
 
-    ![image-20220621224136086](https://www.itdu.tech/image//image-20220621224136086.png)
+    ![image-20220621224136086](https://www.coderdu.tech/image//image-20220621224136086.png)
 
 3. 在controller方法上添加校验分组
 

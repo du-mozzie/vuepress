@@ -9,7 +9,7 @@ tags:
 
 [以交互方式学习图论](https://d3gt.com/index.html)
 
-![image-20210713084911013](https://www.itdu.tech/image/image-20210713084911013.png)
+![image-20210713084911013](https://www.coderdu.tech/image/image-20210713084911013.png)
 
 -   `节点(Vertex)` 与 `边（Edge）`
 -   图的表示： `邻接表` 和 `邻接矩阵`
@@ -43,7 +43,7 @@ tags:
 
 对于一个图，若每条边都是没有方向的，则称该图为无向图。图示如下：
 
-![image-20210713085101912](https://www.itdu.tech/image/image-20210713085101912.png)
+![image-20210713085101912](https://www.coderdu.tech/image/image-20210713085101912.png)
 
 因此，(Vi，Vj)和(Vj，Vi)表示的是同一条边。注意，无向图是用小括号
 
@@ -55,7 +55,7 @@ E(G)={(V1，V2)，(V1，V4)，(V2，V3)，(V2，V5)，(V3，V4)，(V3，V5)，(V
 
 对于一个图G，若每条边都是有方向的，则称该图为有向图。图示如下。
 
-![image-20210713085314217](https://www.itdu.tech/image/image-20210713085314217.png)
+![image-20210713085314217](https://www.coderdu.tech/image/image-20210713085314217.png)
 
 因此，<Vi，Vj>和<Vj，Vi>是两条不同的有向边。注意，有向边又称为弧。
 
@@ -73,13 +73,13 @@ E(G) = {<V1，V2>，<V2，V3>，<V3，V1>，<V1，V3>}
 
 对于无向图，顶点的度表示以该顶点作为一个端点的边的数目。
 
-![image-20210713110355280](https://www.itdu.tech/image/image-20210713110355280.png)
+![image-20210713110355280](https://www.coderdu.tech/image/image-20210713110355280.png)
 
 对于有向图，顶点的度分为入度和出度。入度表示以该顶点为终点的入边数目，出度是以该顶点为起点的出边数目，该顶点的度等于其入度和出度之和。
 
 记住，不管是无向图还是有向图，顶点数n，边数e和顶点的度数有如下关系：
 
-![image-20210713090008230](https://www.itdu.tech/image/image-20210713090008230.png)
+![image-20210713090008230](https://www.coderdu.tech/image/image-20210713090008230.png)
 
 ##### 子图
 
@@ -97,11 +97,11 @@ E(G) = {<V1，V2>，<V2，V3>，<V3，V1>，<V1，V3>}
 
 连通图是指图中任意两个顶点Vi和Vj都连通，则称为连通图。
 
-![image-20210713110528436](https://www.itdu.tech/image/image-20210713110528436.png)
+![image-20210713110528436](https://www.coderdu.tech/image/image-20210713110528436.png)
 
 下面是一个非连通图的例子。
 
-![image-20210713091435601](https://www.itdu.tech/image/image-20210713091435601.png)
+![image-20210713091435601](https://www.coderdu.tech/image/image-20210713091435601.png)
 
 因为V5和V6是单独的，所以是非连通图。
 
@@ -113,7 +113,7 @@ E(G) = {<V1，V2>，<V2，V3>，<V3，V1>，<V1，V3>}
 
 带”权值“的连通图称为网。如图所示。
 
-![image-20210713091510094](https://www.itdu.tech/image/image-20210713091510094.png)
+![image-20210713091510094](https://www.coderdu.tech/image/image-20210713091510094.png)
 
 >   图的创建和遍历
 
@@ -121,7 +121,7 @@ E(G) = {<V1，V2>，<V2，V3>，<V3，V1>，<V1，V3>}
 
 1. 邻接矩阵
 
-    原理就是用两个数组，一个数组保存顶点集，一个数组保存边集。下面的算法实现里边我们也是采用这种存储结构。![image-20210713091734346](https://www.itdu.tech/image/image-20210713091734346.png)
+    原理就是用两个数组，一个数组保存顶点集，一个数组保存边集。下面的算法实现里边我们也是采用这种存储结构。![image-20210713091734346](https://www.coderdu.tech/image/image-20210713091734346.png)
 
 2. 邻接表
 
@@ -141,7 +141,7 @@ E(G) = {<V1，V2>，<V2，V3>，<V3，V1>，<V1，V3>}
 
     图示如下：
 
-    ![image-20210713091920035](https://www.itdu.tech/image/image-20210713091920035.png)
+    ![image-20210713091920035](https://www.coderdu.tech/image/image-20210713091920035.png)
 
     注：红色数字代表遍历的先后顺序，所以图(e)无向图的深度优先遍历的顶点访问序列为：V0，V1，V2，V5，V4，V6，V3，V7，V8
 
@@ -278,7 +278,7 @@ E(G) = {<V1，V2>，<V2，V3>，<V3，V1>，<V1，V3>}
 
     图示如下：
 
-    ![image-20210713092004788](https://www.itdu.tech/image/image-20210713092004788.png)
+    ![image-20210713092004788](https://www.coderdu.tech/image/image-20210713092004788.png)
 
     因此，图(f)采用广义优先搜索遍历以V0为出发点的顶点序列为：V0，V1，V3，V4，V2，V6，V8，V5，V7
 
@@ -452,9 +452,9 @@ E(G) = {<V1，V2>，<V2，V3>，<V3，V1>，<V1，V3>}
 
 比如图(g)可以同时得到两个生成树图(h)和图(i)
 
-![image-20210713092048754](https://www.itdu.tech/image/image-20210713092048754.png) ![image-20210713092055628](https://www.itdu.tech/image/image-20210713092055628.png) 
+![image-20210713092048754](https://www.coderdu.tech/image/image-20210713092048754.png) ![image-20210713092055628](https://www.coderdu.tech/image/image-20210713092055628.png) 
 
-![image-20210713092107112](https://www.itdu.tech/image/image-20210713092107112.png) 
+![image-20210713092107112](https://www.coderdu.tech/image/image-20210713092107112.png) 
 
 知道了什么是生成树之后，我们就很容易理解什么是最小生成树了。所谓最小生成树，用一句话总结就是：权值和最小的生成树就是最小生成树。
 
@@ -466,7 +466,7 @@ E(G) = {<V1，V2>，<V2，V3>，<V3，V1>，<V1，V3>}
 
 求最短路径也就是求最短路径长度。下面是一个带权值的有向图，表格中分别列出了顶点V1其它各顶点的最短路径长度。
 
-![image-20210713092142541](https://www.itdu.tech/image/image-20210713092142541.png)
+![image-20210713092142541](https://www.coderdu.tech/image/image-20210713092142541.png)
 
 | 源点 | 最短路径       | 终点 |      | 路径长度 |
 | ---- | -------------- | ---- | ---- | -------- |

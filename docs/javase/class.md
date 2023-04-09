@@ -99,7 +99,7 @@ Java 官方提供的一组类，这组类的作用是将基本数据类型的数
 
 Byte、Integer、Short、Long、Float、Double、Boolean、Characte
 
-![image-20220114195256701](https://www.itdu.tech/image/image-20220114195256701.png)
+![image-20220114195256701](https://www.coderdu.tech/image/image-20220114195256701.png)
 
 ### 3、装箱和拆箱
 
@@ -398,9 +398,9 @@ String str = "Hello World";
 String str = new String("Hello World");
 ```
 
-![image-20220114202424784](https://www.itdu.tech/image/image-20220114202424784.png)
+![image-20220114202424784](https://www.coderdu.tech/image/image-20220114202424784.png)
 
-![image-20220114202434963](https://www.itdu.tech/image/image-20220114202434963.png)
+![image-20220114202434963](https://www.coderdu.tech/image/image-20220114202434963.png)
 
 ```java
 isLatin1() ? StringLatin1.equals(value, aString.value)
@@ -447,7 +447,7 @@ null 是指对象不存在，引用地址为空。
 
 空是指对象存在，没有内容，长度为零。
 
-![image-20220114202449230](https://www.itdu.tech/image/image-20220114202449230.png)
+![image-20220114202449230](https://www.coderdu.tech/image/image-20220114202449230.png)
 
 #### 2、StringBuffer
 
@@ -455,7 +455,7 @@ String 对象一旦创建，值不能修改（原来的值不能修改，一旦�
 
 修改之后会重新开辟内存空间来存储新的对象，会修改 String 的引用。
 
-![image-20220114202501971](https://www.itdu.tech/image/image-20220114202501971.png)
+![image-20220114202501971](https://www.coderdu.tech/image/image-20220114202501971.png)
 
 String 的值为什么不能修改？修改之后会创建一个新的对象？而不是在原有对象的基础上进行修改？
 
@@ -467,10 +467,10 @@ StringBuffer 底层也是使用数组来存值。
 
 - StringBuffer 数组的默认长度为 16，使用无参构造函数来创建对象。
 
-![image-20220114202535624](https://www.itdu.tech/image/image-20220114202535624.png)
+![image-20220114202535624](https://www.coderdu.tech/image/image-20220114202535624.png)
 
 - 使用有参构造创建对象，数组长度=值的长度+16。
-    ![image-20220114202557779](https://www.itdu.tech/image/image-20220114202557779.png)
+    ![image-20220114202557779](https://www.coderdu.tech/image/image-20220114202557779.png)
 
 ```java
 public class Test {
@@ -493,7 +493,7 @@ StringBuffer 一旦创建，默认会有 16 个字节的空间去修改，但是
 
 StringBuffer 不会重新开辟一块新的内存区域，而是在原有的基础上进行扩容，通过调用父类 ensureCapacityInternal() 方法对底层数组进行扩容，保持引用不变。
 
-![image-20220114202621186](https://www.itdu.tech/image/image-20220114202621186.png)
+![image-20220114202621186](https://www.coderdu.tech/image/image-20220114202621186.png)
 
 StringBuffer 的常用方法，StringBuffer 是线程安全的，但是效率较低，StringBuilder 是线程不安全的，但是效率较高。
 

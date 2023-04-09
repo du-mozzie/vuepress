@@ -30,7 +30,7 @@ tags:
     10.211.55.76 node3
     ```
 
-    ![image-20220227171608873](https://www.itdu.tech/image/image-20220227171608873.png)
+    ![image-20220227171608873](https://www.coderdu.tech/image/image-20220227171608873.png)
 
 3. .以确保各个节点的 cookie 文件使用的是同一个值
 
@@ -107,15 +107,15 @@ tags:
 
 2. 随便找一个节点添加 policy
 
-    ![image-20220227175237916](https://www.itdu.tech/image/image-20220227175237916.png)
+    ![image-20220227175237916](https://www.coderdu.tech/image/image-20220227175237916.png)
 
 3. 在 node1 上创建一个队列发送一条消息，队列存在镜像队列
 
-    ![image-20220227175257411](https://www.itdu.tech/image/image-20220227175257411.png)
+    ![image-20220227175257411](https://www.coderdu.tech/image/image-20220227175257411.png)
 
 4. 停掉 node1 之后发现 node2 成为镜像队列
 
-    ![image-20220227175323583](https://www.itdu.tech/image/image-20220227175323583.png)
+    ![image-20220227175323583](https://www.coderdu.tech/image/image-20220227175323583.png)
 
 5. 就算整个集群只剩下一台机器了 依然能消费队列里面的消息
 
@@ -125,7 +125,7 @@ tags:
 
 ### 10.3.1. 整体架构图
 
-![image-20220227175427065](https://www.itdu.tech/image/image-20220227175427065.png)
+![image-20220227175427065](https://www.coderdu.tech/image/image-20220227175427065.png)
 
 ### 10.3.2. Haproxy 实现负载均衡
 
@@ -149,7 +149,7 @@ tags:
 
     需要修改红色 IP 为当前机器 IP
 
-    ![image-20220227175626908](https://www.itdu.tech/image/image-20220227175626908.png)
+    ![image-20220227175626908](https://www.coderdu.tech/image/image-20220227175626908.png)
 
 3. 在两台节点启动 haproxy
 
@@ -233,7 +233,7 @@ tags:
 
 ​		将业务(Client 深圳)部署到北京的机房可以解决这个问题，但是如果(Client 深圳)调用的另些服务都部署在深圳，那么又会引发新的时延问题，总不见得将所有业务全部部署在一个机房，那么容灾又何以实现？这里使用 Federation 插件就可以很好地解决这个问题。
 
-![image-20220227180626836](https://www.itdu.tech/image/image-20220227180626836.png)
+![image-20220227180626836](https://www.coderdu.tech/image/image-20220227180626836.png)
 
 ### 10.4.2. 搭建步骤
 
@@ -246,23 +246,23 @@ tags:
     rabbitmq-plugins enable rabbitmq_federation_management
     ```
 
-    ![image-20220227180712615](https://www.itdu.tech/image/image-20220227180712615.png)
+    ![image-20220227180712615](https://www.coderdu.tech/image/image-20220227180712615.png)
 
 3. 原理图(先运行 consumer 在 node2 创建 fed_exchange)
 
-    ![image-20220227180730583](https://www.itdu.tech/image/image-20220227180730583.png)
+    ![image-20220227180730583](https://www.coderdu.tech/image/image-20220227180730583.png)
 
 4. 在 downstream(node2)配置 upstream(node1)
 
-    ![image-20220227180744648](https://www.itdu.tech/image/image-20220227180744648.png)
+    ![image-20220227180744648](https://www.coderdu.tech/image/image-20220227180744648.png)
 
 5. 添加 policy
 
-    ![image-20220227180755427](https://www.itdu.tech/image/image-20220227180755427.png)
+    ![image-20220227180755427](https://www.coderdu.tech/image/image-20220227180755427.png)
 
 6. 配置成功
 
-    ![image-20220227180811578](https://www.itdu.tech/image/image-20220227180811578.png)
+    ![image-20220227180811578](https://www.coderdu.tech/image/image-20220227180811578.png)
 
 ## 10.5. Federation Queue
 
@@ -274,13 +274,13 @@ tags:
 
 1. 原理图
 
-    ![image-20220227180925145](https://www.itdu.tech/image/image-20220227180925145.png)
+    ![image-20220227180925145](https://www.coderdu.tech/image/image-20220227180925145.png)
 
 2. 添加 upstream(同上)
 
 3. 添加 policy
 
-    ![image-20220227180943139](https://www.itdu.tech/image/image-20220227180943139.png)
+    ![image-20220227180943139](https://www.coderdu.tech/image/image-20220227180943139.png)
 
 ## 10.6. Shovel
 
@@ -297,12 +297,12 @@ tags:
     rabbitmq-plugins enable rabbitmq_shovel_management
     ```
 
-    ![image-20220227181109640](https://www.itdu.tech/image/image-20220227181109640.png)
+    ![image-20220227181109640](https://www.coderdu.tech/image/image-20220227181109640.png)
 
 2. 原理图(在源头发送的消息直接回进入到目的地队列)
 
-    ![image-20220227181121369](https://www.itdu.tech/image/image-20220227181121369.png)
+    ![image-20220227181121369](https://www.coderdu.tech/image/image-20220227181121369.png)
 
 3. 添加 shovel 源和目的地
 
-    ![image-20220227181134009](https://www.itdu.tech/image/image-20220227181134009.png)
+    ![image-20220227181134009](https://www.coderdu.tech/image/image-20220227181134009.png)

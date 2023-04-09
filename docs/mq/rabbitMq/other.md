@@ -47,7 +47,7 @@ tags:
 
     可以设置0-255，但是企业一般设置0-10，优先级过大对CPU性能浪费高
 
-    ![image-20220227163731937](https://www.itdu.tech/image/image-20220227163731937.png)
+    ![image-20220227163731937](https://www.coderdu.tech/image/image-20220227163731937.png)
 
 - 队列中代码添加优先级
 
@@ -59,7 +59,7 @@ tags:
     channel.queueDeclare("hello", true, false, false, params);
     ```
 
-    ![image-20220227165041613](https://www.itdu.tech/image/image-20220227165041613.png)
+    ![image-20220227165041613](https://www.coderdu.tech/image/image-20220227165041613.png)
 
     发送消息的时候添加优先级
 
@@ -121,7 +121,7 @@ public static void main(String[] args) throws Exception {
 
 info5这条消息的优先级是5，所以先被消费了
 
-![image-20220227170539561](https://www.itdu.tech/image/image-20220227170539561.png)
+![image-20220227170539561](https://www.coderdu.tech/image/image-20220227170539561.png)
 
 ## 9.3. 惰性队列
 
@@ -153,10 +153,10 @@ channel.queueDeclare("queue", false, false, false, args);
 
 页面设置：
 
-![image-20220227171140114](https://www.itdu.tech/image/image-20220227171140114.png)
+![image-20220227171140114](https://www.coderdu.tech/image/image-20220227171140114.png)
 
 ### 9.3.3. 内存开销对比
 
-![image-20220227171003303](https://www.itdu.tech/image/image-20220227171003303.png)
+![image-20220227171003303](https://www.coderdu.tech/image/image-20220227171003303.png)
 
 在发送 1 百万条消息，每条消息大概占 1KB 的情况下，普通队列占用内存是 1.2GB，而惰性队列仅仅占用 1.5MB

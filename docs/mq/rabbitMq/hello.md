@@ -11,7 +11,7 @@ tags:
 
 在下图中，“ P”是我们的生产者，“ C”是我们的消费者。中间的框是一个队列-RabbitMQ 代表使用者保留的消息缓冲区  
 
-![image-20220121155925962](https://www.itdu.tech/image/image-20220121155925962.png)
+![image-20220121155925962](https://www.coderdu.tech/image/image-20220121155925962.png)
 
 ## 2.1 依赖
 
@@ -80,7 +80,7 @@ public class Producer {
 
 **在控制台可以看到有一个消息等待消费**
 
-![image-20220121171519304](https://www.itdu.tech/image/image-20220121171519304.png)
+![image-20220121171519304](https://www.coderdu.tech/image/image-20220121171519304.png)
 
 ## 2.3 消费者
 
@@ -123,8 +123,8 @@ public class Consumer {
 
 **消息消费完成**
 
-![image-20220121171620379](https://www.itdu.tech/image/image-20220121171620379.png)
+![image-20220121171620379](https://www.coderdu.tech/image/image-20220121171620379.png)
 
 **控制台已经没有消息等待消费**
 
-![image-20220121171650966](https://www.itdu.tech/image/image-20220121171650966.png)
+![image-20220121171650966](https://www.coderdu.tech/image/image-20220121171650966.png)

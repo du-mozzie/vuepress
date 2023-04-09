@@ -69,9 +69,9 @@ public @interface AutoConfigurationPackage {}
 
 2. // List<String/> configurations = getCandidateConfigurations(annotationMetadata, attributes)获取所有需要导入容器的配置类
 
-    ![image-20210607075728090](https://www.itdu.tech/image/image-20210607075728090.png)
+    ![image-20210607075728090](https://www.coderdu.tech/image/image-20210607075728090.png)
 
-    ![image-20210607080322989](https://www.itdu.tech/image/image-20210607080322989.png)
+    ![image-20210607080322989](https://www.coderdu.tech/image/image-20210607080322989.png)
 
     - ```java
         List<String> configurations = SpringFactoriesLoader.loadFactoryNames(getSpringFactoriesLoaderFactoryClass(),
@@ -80,7 +80,7 @@ public @interface AutoConfigurationPackage {}
 
         - 工厂加载器加载`private static Map<String, List<String>> loadSpringFactories(ClassLoader classLoader) {}`得到所有的组件，从META-INF/spring.factories下获取；==spring-boot-autoconfigure-2.5.0.jar==文件里写死了一启动就要加载的所有配置类
 
-            ![image-20210607081425971](https://www.itdu.tech/image/image-20210607081425971.png)
+            ![image-20210607081425971](https://www.coderdu.tech/image/image-20210607081425971.png)
 
 3. 虽然一开始默认加载了131个配置类，按照条件规则`@Conditional`最终会按需配置
 
@@ -176,7 +176,7 @@ public class MyConfig {
 
 在自定义配置类的resources中新建META-INF目录并添加spring.factories配置文件
 
-![image-20210607105520928](https://www.itdu.tech/image/image-20210607105520928.png)
+![image-20210607105520928](https://www.coderdu.tech/image/image-20210607105520928.png)
 
 添加配置
 

@@ -15,7 +15,7 @@ tags:
 
 2. 配置nginx/conf/nginx.conf
 
-    ![image-20210626100301586](https://www.itdu.tech/image//image-20210626100301586.png)
+    ![image-20210626100301586](https://www.coderdu.tech/image//image-20210626100301586.png)
 
     ```bash
     upstraem [负载均衡name] {
@@ -111,4 +111,4 @@ tags:
 
     同一个请求，根据nginx策略请求到不同的服务器上面
 
-    ![image-20210626100703542](https://www.itdu.tech/image//image-20210626100703542.png)
+    ![image-20210626100703542](https://www.coderdu.tech/image//image-20210626100703542.png)

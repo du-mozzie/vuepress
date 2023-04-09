@@ -17,7 +17,7 @@ tags:
 >
 >   栈的删除操作，叫作出栈，有的也叫作弹栈。
 
-![image-20210419215326952](https://www.itdu.tech/image/image-20210419215326952.png)
+![image-20210419215326952](https://www.coderdu.tech/image/image-20210419215326952.png)
 
 **逆波兰，使用栈结构来帮助计算机处理数学加减乘除计算问题**
 

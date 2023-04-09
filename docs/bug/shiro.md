@@ -19,7 +19,7 @@ SysUserModel SysUserModel = (SysUserModel)subject.getSession().getAttribute(LOGI
 ```
 
 右边的方法的返回值明明是Object，
-![image-20220221213520681](https://www.itdu.tech/image/image-20220221213520681.png)
+![image-20220221213520681](https://www.coderdu.tech/image/image-20220221213520681.png)
 按道理是可以强转类型的，却偏偏报异常，虽然已经解决了bug，但还是需要梳理一下思路，以防以后再次入坑。。。后来才发现这与shiro有关
 
 结合网上总结的答案

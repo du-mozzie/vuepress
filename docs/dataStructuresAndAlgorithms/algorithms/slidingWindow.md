@@ -64,7 +64,7 @@ for right < length {
 
 输入：s = 7, nums = [2,3,1,2,4,3] 输出：2 解释：子数组 [4,3] 是该条件下的长度最小的子数组。
 
-![滑动窗口](https://www.itdu.tech/image/滑动窗口.gif)
+![滑动窗口](https://www.coderdu.tech/image/滑动窗口.gif)
 
 最后找到 4，3 是最短距离。
 
@@ -84,7 +84,7 @@ for right < length {
 
 解题的关键在于 窗口的起始位置如何移动，如图所示：
 
-![image-20210719172352539](https://www.itdu.tech/image/image-20210719172352539.png)
+![image-20210719172352539](https://www.coderdu.tech/image/image-20210719172352539.png)
 
 可以发现**滑动窗口的精妙之处在于根据当前子序列和大小的情况，不断调节子序列的起始位置。从而将O(n^2)的暴力解法降为O(n)。**
 

@@ -11,7 +11,7 @@ tags:
 
 **HTTP决策树**
 
-![HTTP决策树](https://www.itdu.tech/image//HTTP决策树.webp)
+![HTTP决策树](https://www.coderdu.tech/image//HTTP决策树.webp)
 
 ```java
 @RestControllerAdvice

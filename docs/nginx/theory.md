@@ -11,11 +11,11 @@ tags:
 
 **1、master和worker**
 
-![image-20210626140219932](https://www.itdu.tech/image//image-20210626140219932.png)
+![image-20210626140219932](https://www.coderdu.tech/image//image-20210626140219932.png)
 
 **2、worker如何进行工作的**
 
-![image-20210626140242257](https://www.itdu.tech/image//image-20210626140242257.png)
+![image-20210626140242257](https://www.coderdu.tech/image//image-20210626140242257.png)
 
 **3、一个master和多个woker的好处**
 

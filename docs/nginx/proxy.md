@@ -19,11 +19,11 @@ tags:
 
 3. 在 nginx 进行请求转发的配置（反向代理配置）
 
-    ![image-20210626082744500](https://www.itdu.tech/image//image-20210626082744500.png)
+    ![image-20210626082744500](https://www.coderdu.tech/image//image-20210626082744500.png)
 
 4. 测试
 
-    ![image-20210626082837419](https://www.itdu.tech/image//image-20210626082837419.png)
+    ![image-20210626082837419](https://www.coderdu.tech/image//image-20210626082837419.png)
 
 >   测试二
 
@@ -35,15 +35,15 @@ tags:
 
     ./tomcat/conf/server.xml
 
-    ![image-20210626084147987](https://www.itdu.tech/image//image-20210626084147987.png)
+    ![image-20210626084147987](https://www.coderdu.tech/image//image-20210626084147987.png)
 
-    ![image-20210626084312239](https://www.itdu.tech/image//image-20210626084312239.png)
+    ![image-20210626084312239](https://www.coderdu.tech/image//image-20210626084312239.png)
 
 3. 创建两个不同页面放到tomcat/webapps下
 
 4. 在nginx/conf/nginx.conf下进行配置
 
-    ![image-20210626093700034](https://www.itdu.tech/image//image-20210626093700034.png)
+    ![image-20210626093700034](https://www.coderdu.tech/image//image-20210626093700034.png)
 
     location：正则
 
@@ -117,6 +117,6 @@ tags:
 
 5. 测试
 
-    ![image-20210626094118081](https://www.itdu.tech/image//image-20210626094118081.png)
+    ![image-20210626094118081](https://www.coderdu.tech/image//image-20210626094118081.png)
 
-    ![image-20210626094127998](https://www.itdu.tech/image//image-20210626094127998.png)
+    ![image-20210626094127998](https://www.coderdu.tech/image//image-20210626094127998.png)

@@ -9,7 +9,7 @@ tags:
 
 # SpringBoot启动过程
 
-![image-20210606210009066](https://www.itdu.tech/image//image-20210606210009066.png)
+![image-20210606210009066](https://www.coderdu.tech/image//image-20210606210009066.png)
 
 1. 创建SpringBootApplication
 
@@ -17,37 +17,37 @@ tags:
 
     - 断言primarySources是否为空
 
-        ![image-20210606210133874](https://www.itdu.tech/image//image-20210606210133874.png)
+        ![image-20210606210133874](https://www.coderdu.tech/image//image-20210606210133874.png)
 
     - 保存SpringBootApplication启动类的位置到this.primarySources
 
-        ![image-20210606210614995](https://www.itdu.tech/image//image-20210606210614995.png)
+        ![image-20210606210614995](https://www.coderdu.tech/image//image-20210606210614995.png)
 
     - 判断web应用的类型webApplicationType
 
-        ![image-20210606210810798](https://www.itdu.tech/image//image-20210606210810798.png)
+        ![image-20210606210810798](https://www.coderdu.tech/image//image-20210606210810798.png)
 
-        ![image-20210606210832813](https://www.itdu.tech/image//image-20210606210832813.png)
+        ![image-20210606210832813](https://www.coderdu.tech/image//image-20210606210832813.png)
 
     - **bootstrappers**初始启动引导器（List<Bootstrapper/>）去spring.factories中找org.springframework.boot.`Bootstrapper`类型的配置
 
     - setInitializers去spring.factories中找==ApplicationContextInitializer==，保存List<ApplicationContextInitializer<?>> initializers
 
-        ![image-20210606221653519](https://www.itdu.tech/image//image-20210606221653519.png)
+        ![image-20210606221653519](https://www.coderdu.tech/image//image-20210606221653519.png)
 
     - setListeners去spring.factories找==ApplicationListener==应用监听器，保存List<ApplicationListener<?>> listeners
 
-        ![image-20210606221803399](https://www.itdu.tech/image//image-20210606221803399.png)
+        ![image-20210606221803399](https://www.coderdu.tech/image//image-20210606221803399.png)
 
     - mainApplicationClass找到主程序this.mainApplicationClass = deduceMainApplicationClass();
 
         main方法下的
 
-        ![image-20210606222240560](https://www.itdu.tech/image//image-20210606222240560.png)
+        ![image-20210606222240560](https://www.coderdu.tech/image//image-20210606222240560.png)
 
 2. 运行SpringBootApplication
 
-    ![image-20210606223245039](https://www.itdu.tech/image//image-20210606223245039.png)
+    ![image-20210606223245039](https://www.coderdu.tech/image//image-20210606223245039.png)
 
     - 创建**StopWatch**，停止监听器，监听应用创建时长
 
@@ -86,9 +86,9 @@ tags:
             SpringApplicationRunListeners listeners = getRunListeners(args);
             ```
 
-            ![image-20210607002052432](https://www.itdu.tech/image//image-20210607002052432.png)
+            ![image-20210607002052432](https://www.coderdu.tech/image//image-20210607002052432.png)
 
-            ![image-20210607002524457](https://www.itdu.tech/image//image-20210607002524457.png)
+            ![image-20210607002524457](https://www.coderdu.tech/image//image-20210607002524457.png)
 
      - 遍历所有的SpringApplicationRunListeners，调用starting方法
 
@@ -102,7 +102,7 @@ tags:
 
              当前环境是：StandardServletEnvironment
 
-             ![image-20210607004046206](https://www.itdu.tech/image//image-20210607004046206.png)
+             ![image-20210607004046206](https://www.coderdu.tech/image//image-20210607004046206.png)
 
          - 配置环境信息对象：configureEnvironment(environment, applicationArguments.getSourceArgs());
 
@@ -129,7 +129,7 @@ tags:
 
              - 遍历所有的listener调用contextprepared，EventPublishingRunListener通知所有的监听器contextprepared
 
-                 ![image-20210607012444451](https://www.itdu.tech/image//image-20210607012444451.png)
+                 ![image-20210607012444451](https://www.coderdu.tech/image//image-20210607012444451.png)
 
          - 所有的监听器调用contextLoaded，通知所有的监听器contextLoaded
 

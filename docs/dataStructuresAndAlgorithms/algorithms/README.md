@@ -21,11 +21,11 @@ T(n)=Ω(g(n))表示存在常熟C>0，n~0~>0使得当n≥n~0~时有T(n)≥C·g(n)
 
 T(n)=θ(h(n))表示同时有T(n)=O(h(n))和T(n)=Ω(h(n))
 
-![image-20201207110034898](https://www.itdu.tech/image/image-20201207110034898.png)
+![image-20201207110034898](https://www.coderdu.tech/image/image-20201207110034898.png)
 
-![image-20201207110228918](https://www.itdu.tech/image/image-20201207110228918.png)
+![image-20201207110228918](https://www.coderdu.tech/image/image-20201207110228918.png)
 
-![image-20201207110457415](https://www.itdu.tech/image/image-20201207110457415.png)
+![image-20201207110457415](https://www.coderdu.tech/image/image-20201207110457415.png)
 
 >   复杂度分析小技巧
 

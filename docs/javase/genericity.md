@@ -125,7 +125,7 @@ public class Test {
 
 多态在泛型中不适用
 
-![image-20220114202333621](https://www.itdu.tech/image/image-20220114202333621.png)
+![image-20220114202333621](https://www.coderdu.tech/image/image-20220114202333621.png)
 
 ```java
 public class Test {
